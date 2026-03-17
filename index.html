@@ -81,10 +81,9 @@ nav {
 }
 
 .mobile-nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
   list-style: none;
 }
 
@@ -92,13 +91,15 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 7px 6px;
   border-radius: 999px;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: clamp(0.62rem, 2.6vw, 0.72rem);
   color: var(--text-muted);
   text-decoration: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(99,140,255,0.10);
   transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
