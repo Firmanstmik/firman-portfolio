@@ -67,6 +67,60 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: none;
+  background: rgba(3,5,8,0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+}
+
+.mobile-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(99,140,255,0.10);
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--text);
+  border-color: var(--border-glow);
+  box-shadow: 0 0 20px var(--glow);
+  transform: translateY(-1px);
+}
+
+.mobile-nav-links .mobile-nav-cta {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-color: rgba(124,79,255,0.35);
+  color: #fff;
+}
+
+.mobile-nav-links .mobile-nav-cta:hover {
+  box-shadow: 0 0 30px rgba(91,143,255,0.30);
+}
+
 .nav-logo {
   font-family: var(--font-display);
   font-weight: 800;
@@ -1259,7 +1313,8 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
-  #hero { padding: 100px 24px 60px; }
+  .mobile-nav { display: block; top: 60px; }
+  #hero { padding: 160px 24px 60px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .stats-strip { flex-wrap: wrap; gap: 40px; padding: 40px 24px; }
   #about { padding: 80px 24px; }
@@ -1313,6 +1368,15 @@ footer {
     </div>
   </div>
 </nav>
+<div class="mobile-nav" aria-label="Mobile navigation">
+  <ul class="mobile-nav-links">
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+    <li><a href="#projects" data-i18n="nav.work">Work</a></li>
+    <li><a href="#process" data-i18n="nav.process">Process</a></li>
+    <li><a href="#contact" class="mobile-nav-cta" data-i18n="nav.hire">Hire Me</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section id="hero">
