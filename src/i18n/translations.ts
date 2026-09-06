@@ -199,16 +199,16 @@ export const dictionaries: Record<Lang, Dictionary> = {
     'why.c6.title': 'Reliable Communication',
     'why.c6.desc': 'Clear updates, transparent timelines, and async-friendly delivery.',
     'testi.label': 'Client feedback',
-    'testi.title': 'What clients say',
+    'testi.title': 'Trusted on live production work',
     'testi.q1':
-      'Firman delivered our university analytics platform on time and beyond expectations. The AI-powered dashboard is exactly what we needed to support our students proactively.',
-    'testi.r1': 'Kepala Departemen/Ketua Perguruan Tinggi STMIK Lombok',
+      'Firman helped us shape learning flows that feel modern and reliable. From course structure to student-facing UX, the delivery matched what an education platform needs in production.',
+    'testi.r1': 'Kepala Departemen, STMIK Lombok · Education platforms',
     'testi.q2':
-      'The government administration system Firman built transformed our document workflow. What used to take days now takes minutes. Extremely professional work.',
-    'testi.r2': 'Administrator Kantor Badan Meteorologi ZAM Lombok Tengah',
+      'The LIREP experience needed clarity for investors: curated assets, area intelligence, and trust-driven journeys. Firman translated that into a premium product surface that feels ready for real consultations.',
+    'testi.r2': 'Product stakeholder · Lombok property intelligence',
     'testi.q3':
-      "Our rental booking system has doubled our operational efficiency. Firman understood our business deeply and built exactly what we needed, even features we didn't know we needed.",
-    'testi.r3': 'Owner, PT Bagus Unik Raya',
+      'Our Lombok Rentals booking system doubled operational efficiency. Firman understood the rental business deeply and shipped exactly what we needed, including flows we had not planned yet.',
+    'testi.r3': 'Owner, PT Bagus Unik Raya · Lombok Rentals',
     'cta.label': 'Ready to build?',
     'cta.title': "Let's ship your next production platform",
     'cta.sub':
@@ -431,16 +431,16 @@ export const dictionaries: Record<Lang, Dictionary> = {
     'why.c6.title': 'Komunikasi Andal',
     'why.c6.desc': 'Update jelas, timeline transparan, dan delivery ramah async.',
     'testi.label': 'Testimoni',
-    'testi.title': 'Kata mereka',
+    'testi.title': 'Dipercaya di karya production',
     'testi.q1':
-      'Firman menyelesaikan platform analitik universitas kami tepat waktu dan melebihi ekspektasi. Dashboard berbasis AI ini persis seperti yang kami butuhkan untuk mendukung mahasiswa secara proaktif.',
-    'testi.r1': 'Kepala Departemen/Ketua Perguruan Tinggi STMIK Lombok',
+      'Firman membantu merancang alur pembelajaran yang modern dan andal. Dari struktur kursus sampai UX siswa, hasilnya sesuai kebutuhan platform edukasi yang benar-benar dipakai.',
+    'testi.r1': 'Kepala Departemen, STMIK Lombok · Platform edukasi',
     'testi.q2':
-      'Sistem administrasi pemerintahan yang dibangun Firman mengubah alur dokumen kami. Yang dulu butuh berhari-hari sekarang jadi hitungan menit. Sangat profesional.',
-    'testi.r2': 'Administrator Kantor Badan Meteorologi ZAM Lombok Tengah',
+      'Pengalaman LIREP butuh kejernihan untuk investor: aset terkurasi, intelijen area, dan journey berbasis trust. Firman mengubahnya menjadi permukaan produk premium yang siap untuk konsultasi nyata.',
+    'testi.r2': 'Product stakeholder · Property intelligence Lombok',
     'testi.q3':
-      'Sistem booking rental kami melipatgandakan efisiensi operasional. Firman memahami bisnis kami dengan baik dan membangun persis seperti yang kami butuhkan, bahkan fitur yang kami belum terpikirkan.',
-    'testi.r3': 'Owner, PT Bagus Unik Raya',
+      'Sistem booking Lombok Rentals kami melipatgandakan efisiensi operasional. Firman paham bisnis rental dengan dalam dan mengirim persis yang kami butuhkan, termasuk alur yang belum kami rencanakan.',
+    'testi.r3': 'Owner, PT Bagus Unik Raya · Lombok Rentals',
     'cta.label': 'Siap membangun?',
     'cta.title': 'Ayo kirim platform production berikutnya',
     'cta.sub':

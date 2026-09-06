@@ -344,18 +344,24 @@ export const TESTIMONIALS = [
     name: 'Prof Khairul Imtihan S.Kom., M.Kom',
     roleKey: 'testi.r1',
     initial: 'K',
+    project: 'GuruHub / EdTech',
+    accent: '#4f46e5',
   },
   {
     quoteKey: 'testi.q2',
-    name: 'Agung Kresna',
+    name: 'LIREP Product Stakeholder',
     roleKey: 'testi.r2',
-    initial: 'A',
+    initial: 'L',
+    project: 'LIREP Global',
+    accent: '#0f172a',
   },
   {
     quoteKey: 'testi.q3',
     name: 'Agus Harianto',
     roleKey: 'testi.r3',
     initial: 'A',
+    project: 'Lombok Rentals',
+    accent: '#b45309',
   },
 ] as const
 

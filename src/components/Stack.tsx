@@ -1,6 +1,6 @@
 import { SKILL_KEYS, TECH } from '../data'
 import { useLanguage } from '../i18n/LanguageContext'
-import { Reveal, SectionLabel, SectionTitle, Stagger, StaggerItem, motion, useReducedMotion } from './ui'
+import { Reveal, SectionLabel, Stagger, StaggerItem, motion, useReducedMotion } from './ui'
 
 function TechGroup({
   label,
@@ -12,28 +12,28 @@ function TechGroup({
   const reduce = useReducedMotion()
 
   return (
-    <div>
-      <p className="mb-3 text-[0.8rem] font-medium text-muted">{label}</p>
+    <div className="rounded-[18px] border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+      <p className="mb-4 text-[0.78rem] font-medium tracking-[0.06em] text-blue-200/80 uppercase">{label}</p>
       <Stagger className="flex flex-wrap gap-2.5" stagger={0.04}>
         {items.map((tech) => (
           <StaggerItem key={tech.name}>
             <motion.div
-              className="inline-flex items-center gap-2.5 rounded-[12px] border border-line bg-surface px-3.5 py-2.5 shadow-[0_1px_0_rgba(255,255,255,0.65)_inset]"
+              className="inline-flex items-center gap-2.5 rounded-[12px] border border-white/10 bg-white/[0.05] px-3.5 py-2.5"
               whileHover={
                 reduce
                   ? undefined
                   : {
                       y: -4,
                       scale: 1.04,
-                      borderColor: 'rgba(29,78,216,0.35)',
-                      boxShadow: '0 12px 28px -18px rgba(29,78,216,0.45)',
+                      borderColor: 'rgba(147,197,253,0.45)',
+                      backgroundColor: 'rgba(255,255,255,0.09)',
                     }
               }
               whileTap={reduce ? undefined : { scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 380, damping: 22 }}
             >
-              <img src={tech.icon} alt="" width={20} height={20} className="size-5" loading="lazy" />
-              <span className="text-sm font-medium text-ink">{tech.name}</span>
+              <img src={tech.icon} alt="" width={20} height={20} className="size-5 brightness-110" loading="lazy" />
+              <span className="text-sm font-medium text-white">{tech.name}</span>
             </motion.div>
           </StaggerItem>
         ))}
@@ -47,14 +47,22 @@ export function Stack() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="stack" className="border-y border-line/80 bg-canvas-deep/45 section-y">
-      <div className="section-pad mx-auto max-w-[1280px]">
+    <section id="stack" className="relative overflow-hidden bg-ink text-white section-y">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(29,78,216,0.28),transparent_55%)]"
+      />
+      <div className="section-pad relative mx-auto max-w-[1280px]">
         <Reveal>
-          <SectionLabel>{t('stack.label')}</SectionLabel>
-          <SectionTitle>{t('stack.title')}</SectionTitle>
+          <SectionLabel>
+            <span className="text-blue-300">{t('stack.label')}</span>
+          </SectionLabel>
+          <h2 className="font-display max-w-3xl text-[clamp(1.75rem,4.5vw,3rem)] leading-[1.12] font-bold tracking-[-0.035em] text-balance">
+            {t('stack.title')}
+          </h2>
         </Reveal>
 
-        <div className="mt-10 space-y-8 sm:mt-12 sm:space-y-10">
+        <div className="mt-10 grid gap-4 sm:mt-12 lg:grid-cols-3">
           <Reveal>
             <TechGroup label={t('stack.frontend')} items={TECH.frontend} />
           </Reveal>
@@ -70,7 +78,7 @@ export function Stack() {
           {SKILL_KEYS.map((key) => (
             <StaggerItem key={key}>
               <motion.span
-                className="inline-flex rounded-full border border-accent/15 bg-accent-soft px-3.5 py-2 text-[0.76rem] font-medium text-accent"
+                className="inline-flex rounded-full border border-blue-300/20 bg-blue-400/10 px-3.5 py-2 text-[0.76rem] font-medium text-blue-200"
                 whileHover={reduce ? undefined : { scale: 1.06, y: -2 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
               >

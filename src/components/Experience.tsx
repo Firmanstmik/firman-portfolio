@@ -8,14 +8,22 @@ export function Experience() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="experience" className="border-y border-line/80 bg-surface/55 section-y">
-      <div className="section-pad mx-auto max-w-[1280px]">
+    <section id="experience" className="relative overflow-hidden section-y">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,#f8fafc_0%,#f7f7f5_40%,#eef2ff_100%)]"
+      />
+      <div className="section-pad relative mx-auto max-w-[1280px]">
         <Reveal>
           <SectionLabel>{t('exp.label')}</SectionLabel>
           <SectionTitle>{t('exp.title')}</SectionTitle>
         </Reveal>
 
-        <Stagger className="mt-10 grid gap-4 lg:mt-12 lg:grid-cols-2 lg:gap-6" stagger={0.1}>
+        <Stagger className="relative mt-10 grid gap-4 lg:mt-12 lg:grid-cols-2 lg:gap-6" stagger={0.1}>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-6 bottom-6 left-[1.35rem] hidden w-px bg-gradient-to-b from-accent/40 via-line to-transparent lg:left-1/2 lg:hidden"
+          />
           {EXPERIENCE.map((job) => (
             <StaggerItem key={job.id}>
               <HoverLift className="group surface-card flex h-full flex-col p-6 sm:p-7 md:p-8">
