@@ -13,7 +13,7 @@ export default function NotFound() {
       </p>
       <Link href="/" className="btn-primary mt-8">
         <ArrowLeft className="size-4" aria-hidden />
-        Back to home
+        <span>Back to home</span>
       </Link>
     </section>
   )

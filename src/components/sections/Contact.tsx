@@ -33,7 +33,7 @@ export function Contact() {
               <div className="mt-10 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
                 <Magnetic>
                   <Link href={`mailto:${SITE.email}`} className="btn-primary w-full sm:w-auto">
-                    Get In Touch
+                    <span>Get In Touch</span>
                     <ArrowUpRight className="size-4" aria-hidden />
                   </Link>
                 </Magnetic>
@@ -44,7 +44,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="btn-secondary w-full sm:w-auto"
                   >
-                    WhatsApp
+                    <span>WhatsApp</span>
                   </Link>
                 </Magnetic>
               </div>

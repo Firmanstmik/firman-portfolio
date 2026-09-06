@@ -117,7 +117,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-auto"
               >
-                Let&apos;s Talk
+                <span>Let&apos;s Talk</span>
                 <ArrowUpRight className="size-4" aria-hidden />
               </Link>
             </div>

@@ -143,7 +143,7 @@
       0 0 0 1px rgba(47, 128, 255, 0.1);
   }
 
-  /* Shared swipe-button base baked into primary/secondary */
+  /* Premium swipe buttons */
   .btn-primary,
   .btn-secondary {
     position: relative;
@@ -152,17 +152,24 @@
     justify-content: center;
     gap: 0.55rem;
     min-height: 52px;
-    padding: 0.9rem 1.5rem;
+    padding: 0.9rem 1.55rem;
     overflow: hidden;
     isolation: isolate;
     border-radius: 12px;
     font-size: 0.95rem;
     font-weight: 600;
-    transition: transform 200ms var(--ease-out-expo), box-shadow 200ms var(--ease-out-expo), color 200ms var(--ease-out-expo);
+    letter-spacing: 0.01em;
+    transition:
+      color 280ms var(--ease-out-expo),
+      border-color 280ms var(--ease-out-expo),
+      transform 220ms var(--ease-out-expo),
+      box-shadow 220ms var(--ease-out-expo);
   }
 
-  .btn-primary > *,
-  .btn-secondary > * {
+  .btn-primary span,
+  .btn-primary svg,
+  .btn-secondary span,
+  .btn-secondary svg {
     position: relative;
     z-index: 1;
   }
@@ -205,39 +212,46 @@
     }
   }
 
+  /* Solid blue → swipe to white, text becomes dark */
   .btn-primary {
-    border: 1px solid transparent;
+    border: 1.5px solid var(--color-accent);
     background: var(--color-accent);
     color: #fff;
-    box-shadow: 0 12px 28px -14px rgba(47, 128, 255, 0.85);
+    box-shadow: 0 12px 28px -14px rgba(47, 128, 255, 0.75);
   }
 
   .btn-primary::before {
-    background: var(--color-accent-hover);
+    background: #ffffff;
   }
 
-  .btn-primary:hover {
-    box-shadow: 0 16px 34px -14px rgba(26, 86, 214, 0.9);
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    color: #07111f;
+    border-color: #ffffff;
+    box-shadow: 0 14px 32px -16px rgba(255, 255, 255, 0.35);
   }
 
+  /* Transparent outline → swipe to blue, text stays white */
   .btn-secondary {
     border: 1.5px solid var(--color-accent);
     background: transparent;
-    color: #fff;
+    color: #ffffff;
   }
 
   .btn-secondary::before {
     background: var(--color-accent);
   }
 
-  .btn-secondary:hover {
-    color: #fff;
-    box-shadow: 0 12px 28px -16px rgba(47, 128, 255, 0.75);
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    color: #ffffff;
+    border-color: var(--color-accent);
+    box-shadow: 0 14px 32px -16px rgba(47, 128, 255, 0.7);
   }
 
   .btn-nav {
     min-height: 42px;
-    padding: 0.55rem 1.15rem;
+    padding: 0.55rem 1.2rem;
     border-radius: 999px;
     font-size: 0.82rem;
   }
