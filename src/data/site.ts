@@ -335,6 +335,45 @@ export const PROJECTS: Project[] = [
     challenges: ['Explaining complex AI systems without fluff'],
     results: ['In-build product marketing surface for Ukonnect'],
   },
+  {
+    slug: 'rijschool-via-via',
+    code: '09',
+    title: 'Rijschool Via Via',
+    category: 'Conversion / Brand',
+    tagline: 'Premium rijopleiding in Leiderdorp',
+    summary:
+      'Premium driving school website for Rijschool Via Via in Leiderdorp — calm brand storytelling, trust signals, regional coverage, and conversion paths for trial lessons.',
+    url: 'https://rijschool-via-via.vercel.app/',
+    image: '/projects/rijschool.jpg',
+    status: 'live',
+    featured: true,
+    company: 'Ukonnect / LocalClicks',
+    tech: ['Next.js', 'Tailwind', 'Conversion UX', 'SEO'],
+    role: [
+      'Frontend Developer',
+      'Brand storytelling',
+      'Conversion UX',
+      'Deployment',
+    ],
+    problem:
+      'A premium Dutch driving school needed a calm, trustworthy digital presence that converts trial lessons without feeling pushy.',
+    solution:
+      'Built an editorial conversion site around the Via Via method: personal guidance, fixed instructors, regional coverage, and clear contact CTAs.',
+    features: [
+      'Premium brand storytelling',
+      'Method & trust architecture',
+      'Regional coverage UX',
+      'Trial-lesson conversion paths',
+    ],
+    challenges: [
+      'Translating a calm in-person teaching philosophy into web pacing',
+      'Balancing luxury tone with clear booking/contact conversion',
+    ],
+    results: [
+      'Live premium conversion website for Leiderdorp and surrounding areas',
+      'Clear journey from brand story to contact / trial lesson',
+    ],
+  },
 ]
 
 export const SERVICES = [
