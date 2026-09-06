@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import { getFeaturedProjects } from '@/data/site'
 import { ProjectCard } from '@/components/sections/ProjectCard'
 import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function Projects() {
   const featured = getFeaturedProjects()
@@ -26,7 +27,7 @@ export function Projects() {
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform hover:translate-x-0.5"
               >
                 View All Projects
-                <ArrowUpRight className="size-3.5" aria-hidden />
+                <Ix icon={Icons.export} size={14} />
               </Link>
             }
           />

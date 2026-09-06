@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { ArrowUpRight, Github, Mail } from 'lucide-react'
 import { SITE } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function Contact() {
   return (
@@ -32,7 +33,7 @@ export function Contact() {
               <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:justify-center sm:gap-3.5">
                 <Link href={`mailto:${SITE.email}`} className="btn-primary sm:w-auto">
                   <span>Get In Touch</span>
-                  <ArrowUpRight className="size-4 shrink-0" aria-hidden />
+                  <Ix icon={Icons.export} size={16} className="shrink-0" />
                 </Link>
                 <Link
                   href={SITE.whatsapp}
@@ -40,6 +41,7 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="btn-secondary sm:w-auto"
                 >
+                  <Ix icon={Icons.whatsapp} size={16} className="shrink-0" />
                   <span>WhatsApp</span>
                 </Link>
               </div>
@@ -49,7 +51,7 @@ export function Contact() {
                   href={`mailto:${SITE.email}`}
                   className="inline-flex items-center gap-2 transition-colors hover:text-accent"
                 >
-                  <Mail className="size-4" aria-hidden />
+                  <Ix icon={Icons.mail} size={16} />
                   {SITE.email}
                 </a>
                 <a
@@ -58,7 +60,7 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 transition-colors hover:text-accent"
                 >
-                  <Github className="size-4" aria-hidden />
+                  <Ix icon={Icons.link} size={16} />
                   GitHub
                 </a>
               </div>

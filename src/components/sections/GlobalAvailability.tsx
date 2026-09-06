@@ -1,4 +1,6 @@
 import { Reveal } from '@/components/ui/Reveal'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function GlobalAvailability() {
   return (
@@ -7,7 +9,10 @@ export function GlobalAvailability() {
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
             <div>
-              <p className="eyebrow">Working Globally</p>
+              <p className="eyebrow inline-flex items-center gap-2">
+                <Ix icon={Icons.global} size={14} />
+                Working Globally
+              </p>
               <h2 className="mt-3 text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold tracking-tight">
                 Indonesia → Worldwide
               </h2>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Code2, Github, Mail } from 'lucide-react'
 import { SITE, PROFILE } from '@/data/site'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 const nav = [
   { href: '/#home', label: 'Home' },
@@ -19,7 +20,7 @@ export function Footer() {
           <div>
             <Link href="/#home" className="inline-flex items-center gap-2.5 font-semibold tracking-[0.08em]">
               <span className="grid size-8 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent">
-                <Code2 className="size-4" aria-hidden />
+                <Ix icon={Icons.brand} size={16} />
               </span>
               <span className="text-[0.95rem]">
                 <span className="text-white">FIRMAN</span>
@@ -62,7 +63,7 @@ export function Footer() {
                   href={`mailto:${SITE.email}`}
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
-                  <Mail className="size-3.5" aria-hidden />
+                  <Ix icon={Icons.mail} size={14} />
                   Email
                 </a>
               </li>
@@ -73,7 +74,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
-                  <Github className="size-3.5" aria-hidden />
+                  <Ix icon={Icons.link} size={14} />
                   GitHub
                 </a>
               </li>
@@ -82,8 +83,9 @@ export function Footer() {
                   href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-muted transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
+                  <Ix icon={Icons.whatsapp} size={14} />
                   WhatsApp
                 </a>
               </li>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
 import { PROJECTS } from '@/data/site'
 import { ProjectCard } from '@/components/sections/ProjectCard'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -18,7 +19,7 @@ export default function ProjectsIndexPage() {
           href="/#projects"
           className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
         >
-          <ArrowLeft className="size-4" aria-hidden />
+          <Ix icon={Icons.arrowLeft} size={16} />
           Back to home
         </Link>
 

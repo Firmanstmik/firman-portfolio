@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowUpRight, ExternalLink } from 'lucide-react'
 import { PROJECTS, getProjectBySlug, SITE } from '@/data/site'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -39,7 +40,7 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
           href="/projects"
           className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
         >
-          <ArrowLeft className="size-4" aria-hidden />
+          <Ix icon={Icons.arrowLeft} size={16} />
           Back to projects
         </Link>
 
@@ -59,11 +60,11 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
               className="btn-primary"
             >
               <span>Open Live Site</span>
-              <ExternalLink className="size-4" aria-hidden />
+              <Ix icon={Icons.link} size={16} />
             </a>
             <Link href="/#contact" className="btn-secondary">
               <span>Discuss a similar build</span>
-              <ArrowUpRight className="size-4" aria-hidden />
+              <Ix icon={Icons.export} size={16} />
             </Link>
           </div>
         </div>

@@ -3,7 +3,8 @@ import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function About() {
   return (
@@ -76,7 +77,7 @@ export function About() {
                     className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent"
                   >
                     Visit company
-                    <ArrowUpRight className="size-3.5" aria-hidden />
+                    <Ix icon={Icons.export} size={14} />
                   </Link>
                 </article>
               ))}

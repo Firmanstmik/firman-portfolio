@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import type { Project } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
@@ -60,7 +61,11 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 group-hover:translate-x-1"
           >
             View Case Study
-            <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
+            <Ix
+              icon={Icons.export}
+              size={14}
+              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
           </Link>
         </div>
       </article>

@@ -1,7 +1,8 @@
-import { Star } from 'lucide-react'
 import { TESTIMONIALS } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function Testimonials() {
   return (
@@ -21,7 +22,7 @@ export function Testimonials() {
               <blockquote className="card-surface flex h-full flex-col p-7 sm:p-8">
                 <div className="mb-5 flex gap-1 text-accent">
                   {Array.from({ length: item.rating }).map((_, idx) => (
-                    <Star key={idx} className="size-3.5 fill-current" aria-hidden />
+                    <Ix key={idx} icon={Icons.star} size={14} />
                   ))}
                 </div>
                 <p className="flex-1 text-[1.02rem] leading-relaxed text-text/90">

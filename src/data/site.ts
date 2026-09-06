@@ -385,7 +385,7 @@ export const SERVICES = [
   {
     code: '02',
     title: 'Mobile Applications',
-    desc: 'Cross-platform mobile experiences with React Native and progressive web apps.',
+    desc: 'Cross-platform apps with Flutter, Dart, Kotlin, and progressive web experiences.',
   },
   {
     code: '03',
@@ -402,7 +402,11 @@ export const SERVICES = [
 export const TECH_STACK = [
   { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF' },
   { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+  { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter/02569B' },
+  { name: 'Dart', icon: 'https://cdn.simpleicons.org/dart/0175C2' },
+  { name: 'Kotlin', icon: 'https://cdn.simpleicons.org/kotlin/7F52FF' },
   { name: 'Laravel', icon: 'https://cdn.simpleicons.org/laravel/FF2D20' },
+  { name: 'PHP', icon: 'https://cdn.simpleicons.org/php/777BB4' },
   { name: 'Django', icon: 'https://cdn.simpleicons.org/django/092E20' },
   { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
   { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },

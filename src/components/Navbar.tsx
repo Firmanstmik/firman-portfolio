@@ -1,10 +1,11 @@
 'use client'
 
-import { Menu, X, Code2, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 const links = [
   { href: '/#home', label: 'Home' },
@@ -62,7 +63,7 @@ export function Navbar() {
           className="inline-flex min-w-0 shrink items-center gap-2 font-semibold tracking-[0.04em] sm:gap-2.5"
         >
           <span className="grid size-8 shrink-0 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent sm:size-9 sm:rounded-xl">
-            <Code2 className="size-3.5 sm:size-4" aria-hidden />
+            <Ix icon={Icons.brand} size={18} />
           </span>
           <span className="truncate text-[0.82rem] sm:text-[0.95rem]">
             <span className="text-white">FIRMAN</span>
@@ -89,7 +90,7 @@ export function Navbar() {
             className="btn-primary btn-nav max-md:hidden md:inline-flex"
           >
             <span>Hire Me</span>
-            <ArrowUpRight className="size-3.5" aria-hidden />
+            <Ix icon={Icons.export} size={14} />
           </Link>
 
           <button
@@ -100,7 +101,7 @@ export function Navbar() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            {open ? <Ix icon={Icons.close} size={20} /> : <Ix icon={Icons.menu} size={20} />}
           </button>
         </div>
       </nav>
@@ -118,7 +119,6 @@ export function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: reduce ? 0 : 0.28, ease }}
           >
-            {/* Solid opaque panel — never rely on translucent tokens on mobile */}
             <div className="absolute inset-0 bg-[#05070d]" />
             <div
               aria-hidden
@@ -185,7 +185,7 @@ export function Navbar() {
                   className="btn-primary w-full"
                 >
                   <span>Let&apos;s Talk</span>
-                  <ArrowUpRight className="size-4" aria-hidden />
+                  <Ix icon={Icons.export} size={16} />
                 </Link>
                 <p className="text-center text-[0.78rem] text-white/40">
                   Available for international projects

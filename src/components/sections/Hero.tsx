@@ -2,11 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Mail, Sparkles } from 'lucide-react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { EXPERIENCE, PROFILE } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export function Hero() {
   const reduce = useReducedMotion()
@@ -60,7 +61,7 @@ export function Hero() {
         <div className="relative z-10 min-w-0 lg:col-span-6">
           <Reveal>
             <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-accent/25 bg-accent-soft px-3 py-1.5 text-[0.72rem] font-semibold tracking-wide text-accent backdrop-blur-sm sm:mb-5 sm:px-3.5 sm:text-[0.78rem]">
-              <Sparkles className="size-3.5 shrink-0" aria-hidden />
+              <Ix icon={Icons.spark} size={14} className="shrink-0" />
               <span className="truncate">Available for international projects</span>
             </div>
           </Reveal>
@@ -98,10 +99,10 @@ export function Hero() {
             <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
               <Link href="/#projects" className="btn-primary sm:w-auto">
                 <span>View My Work</span>
-                <ArrowRight className="size-4 shrink-0" aria-hidden />
+                <Ix icon={Icons.arrowRight} size={16} className="shrink-0" />
               </Link>
               <Link href="/#contact" className="btn-secondary sm:w-auto">
-                <Mail className="size-4 shrink-0" aria-hidden />
+                <Ix icon={Icons.mail} size={16} className="shrink-0" />
                 <span>Contact Me</span>
               </Link>
             </div>

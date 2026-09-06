@@ -1,6 +1,16 @@
 import { PROCESS } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Ix, type IconsaxIcon } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
+
+const processIcons: IconsaxIcon[] = [
+  Icons.discover,
+  Icons.plan,
+  Icons.build,
+  Icons.launch,
+  Icons.improve,
+]
 
 export function Process() {
   return (
@@ -23,10 +33,13 @@ export function Process() {
             {PROCESS.map((step, i) => (
               <Reveal key={step.code} delay={i * 0.06}>
                 <article className="card-surface relative h-full p-6">
-                  <div className="grid size-10 place-items-center rounded-full bg-accent font-mono text-xs font-bold text-bg shadow-[0_0_24px_-6px_rgba(34,197,94,0.9)]">
-                    {step.code}
+                  <div className="grid size-11 place-items-center rounded-2xl bg-accent text-white shadow-[0_0_28px_-8px_rgba(47,128,255,0.95)]">
+                    <Ix icon={processIcons[i]} size={20} color="#ffffff" />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold tracking-tight">{step.title}</h3>
+                  <p className="mt-4 font-mono text-[0.7rem] tracking-wide text-accent">
+                    {step.code}
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold tracking-tight">{step.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted">{step.desc}</p>
                 </article>
               </Reveal>

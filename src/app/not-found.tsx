@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { Ix } from '@/components/ui/Ix'
+import { Icons } from '@/components/ui/icons'
 
 export default function NotFound() {
   return (
@@ -12,7 +13,7 @@ export default function NotFound() {
         The page you are looking for does not exist or has been moved.
       </p>
       <Link href="/" className="btn-primary mt-8">
-        <ArrowLeft className="size-4" aria-hidden />
+        <Ix icon={Icons.arrowLeft} size={16} />
         <span>Back to home</span>
       </Link>
     </section>
