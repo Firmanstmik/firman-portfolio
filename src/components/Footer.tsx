@@ -21,7 +21,10 @@ export function Footer() {
               <span className="grid size-8 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent">
                 <Code2 className="size-4" aria-hidden />
               </span>
-              <span className="text-[0.82rem]">{SITE.name}</span>
+              <span className="text-[0.95rem]">
+                <span className="text-white">FIRMAN</span>
+                <span className="text-accent">LABS</span>
+              </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               Full-stack developer building digital products and business systems.

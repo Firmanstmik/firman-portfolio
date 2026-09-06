@@ -4,7 +4,6 @@ import { Menu, X, Code2, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { SITE } from '@/data/site'
 import { cn } from '@/lib/utils'
 
 const links = [
@@ -44,11 +43,14 @@ export function Navbar() {
       )}
     >
       <nav className="section-pad container-max relative grid h-16 grid-cols-[1fr_auto] items-center gap-4 sm:h-[4.5rem] lg:grid-cols-[1fr_auto_1fr]">
-        <Link href="/#home" className="inline-flex items-center gap-2.5 font-semibold tracking-[0.08em]">
+        <Link href="/#home" className="inline-flex items-center gap-2.5 font-semibold tracking-[0.04em]">
           <span className="grid size-9 place-items-center rounded-xl border border-accent/30 bg-accent-soft text-accent">
             <Code2 className="size-4" aria-hidden />
           </span>
-          <span className="text-[0.84rem]">{SITE.name}</span>
+          <span className="text-[0.95rem]">
+            <span className="text-white">FIRMAN</span>
+            <span className="text-accent">LABS</span>
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex xl:gap-10">
@@ -56,7 +58,7 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-[0.88rem] text-muted transition-colors hover:text-text"
+                className="text-[0.88rem] text-white/70 transition-colors hover:text-white"
               >
                 {link.label}
               </Link>
@@ -67,9 +69,9 @@ export function Navbar() {
         <div className="flex items-center justify-end gap-2">
           <Link
             href="/#contact"
-            className="hidden items-center gap-1.5 rounded-full border border-white/12 px-4 py-2.5 text-[0.82rem] font-semibold text-text transition-colors hover:border-accent/40 hover:text-accent sm:inline-flex"
+            className="btn-primary btn-nav hidden sm:inline-flex"
           >
-            Let&apos;s Talk
+            <span>Hire Me</span>
             <ArrowUpRight className="size-3.5" aria-hidden />
           </Link>
 
