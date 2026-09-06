@@ -1,13 +1,6 @@
-# Firman Maulana — Portfolio
+# FIRMANLABS — Premium Full-Stack Developer Portfolio
 
-Premium personal portfolio with live production case studies.
-
-## Stack
-
-- Vite + React 19 + TypeScript
-- Tailwind CSS v4
-- GSAP + ScrollTrigger
-- Lenis smooth scroll
+Next.js 15 App Router · TypeScript · Tailwind CSS · Framer Motion · Vercel
 
 ## Develop
 
@@ -16,17 +9,19 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173
-
-## Capture project screenshots
-
-```bash
-npm run capture
-```
+Open [http://localhost:3000](http://localhost:3000)
 
 ## Build
 
 ```bash
 npm run build
-npm run preview
+npm start
 ```
+
+## Contact email (optional)
+
+Set `RESEND_API_KEY` in `.env.local` to enable Resend delivery via `/api/contact`.
+
+## Content
+
+Project and profile data live in `src/data/site.ts` so content can later move to a CMS.
