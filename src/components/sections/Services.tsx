@@ -1,12 +1,17 @@
+'use client'
+
 import { SERVICES } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Ix, type IconsaxIcon } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
+import { useI18n } from '@/i18n/provider'
 
 const serviceIcons: IconsaxIcon[] = [Icons.web, Icons.mobile, Icons.backend, Icons.deploy]
 
 export function Services() {
+  const { t } = useI18n()
+
   return (
     <section id="services" className="section-y relative border-y border-white/8 bg-surface/35">
       <div
@@ -16,15 +21,16 @@ export function Services() {
       <div className="section-pad container-max relative">
         <Reveal>
           <SectionHeader
-            eyebrow="What I Do"
-            title="End-to-End Development"
-            lead="From idea to deployment, I own the full path — product thinking, engineering, and shipping."
+            eyebrow={t.services.eyebrow}
+            title={t.services.title}
+            lead={t.services.lead}
           />
         </Reveal>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service, i) => {
             const Icon = serviceIcons[i]
+            const copy = t.services.items[i]
             return (
               <Reveal key={service.code} delay={i * 0.06}>
                 <article className="card-surface group h-full p-6 sm:p-7">
@@ -38,8 +44,8 @@ export function Services() {
                     </span>
                     <span className="font-mono text-xs text-muted">{service.code}</span>
                   </div>
-                  <h3 className="text-xl font-semibold tracking-tight">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{service.desc}</p>
+                  <h3 className="text-xl font-semibold tracking-tight">{copy.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{copy.desc}</p>
                 </article>
               </Reveal>
             )

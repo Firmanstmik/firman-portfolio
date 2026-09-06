@@ -1,18 +1,23 @@
+'use client'
+
 import Link from 'next/link'
 import { SITE, PROFILE } from '@/data/site'
 import { Ix } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
-
-const nav = [
-  { href: '/#home', label: 'Home' },
-  { href: '/#about', label: 'About' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/#contact', label: 'Contact' },
-] as const
+import { useI18n } from '@/i18n/provider'
 
 export function Footer() {
+  const { t } = useI18n()
+
+  const nav = [
+    { href: '/#home', label: t.nav.home },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#projects', label: t.nav.projects },
+    { href: '/#services', label: t.nav.services },
+    { href: '/#testimonials', label: t.nav.testimonials },
+    { href: '/#contact', label: t.nav.contact },
+  ] as const
+
   return (
     <footer className="border-t border-white/8">
       <div className="section-pad container-max py-14 sm:py-16">
@@ -28,7 +33,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              Full-stack developer building digital products and business systems.
+              {t.footer.blurb}
             </p>
             <p className="mt-3 text-sm text-muted">
               {PROFILE.name}, {PROFILE.degree}
@@ -37,7 +42,7 @@ export function Footer() {
 
           <div>
             <p className="text-[0.72rem] font-semibold tracking-[0.16em] text-muted uppercase">
-              Navigation
+              {t.footer.navigation}
             </p>
             <ul className="mt-4 space-y-2.5">
               {nav.map((item) => (
@@ -55,7 +60,7 @@ export function Footer() {
 
           <div>
             <p className="text-[0.72rem] font-semibold tracking-[0.16em] text-muted uppercase">
-              Connect
+              {t.footer.connect}
             </p>
             <ul className="mt-4 space-y-2.5">
               <li>
@@ -64,7 +69,7 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
                   <Ix icon={Icons.mail} size={14} />
-                  Email
+                  {t.footer.email}
                 </a>
               </li>
               <li>
@@ -75,7 +80,7 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
                   <Ix icon={Icons.link} size={14} />
-                  GitHub
+                  {t.footer.github}
                 </a>
               </li>
               <li>
@@ -86,7 +91,7 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
                 >
                   <Ix icon={Icons.whatsapp} size={14} />
-                  WhatsApp
+                  {t.footer.whatsapp}
                 </a>
               </li>
             </ul>
@@ -95,7 +100,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/8 pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Firmanlabs</p>
-          <p>{PROFILE.location} · Remote worldwide</p>
+          <p>{t.footer.based}</p>
         </div>
       </div>
     </footer>

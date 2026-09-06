@@ -1,17 +1,22 @@
+'use client'
+
 import Image from 'next/image'
 import { TECH_STACK } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { useI18n } from '@/i18n/provider'
 
 export function TechStack() {
+  const { t } = useI18n()
+
   return (
     <section id="stack" className="section-y">
       <div className="section-pad container-max">
         <Reveal>
           <SectionHeader
-            eyebrow="Tech Stack"
-            title="Technologies I Work With"
-            lead="Modern, reliable tools chosen for production systems — not trend chasing."
+            eyebrow={t.stack.eyebrow}
+            title={t.stack.title}
+            lead={t.stack.lead}
           />
         </Reveal>
 

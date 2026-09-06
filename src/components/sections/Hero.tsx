@@ -8,8 +8,10 @@ import { EXPERIENCE, PROFILE } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { Ix } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
+import { useI18n } from '@/i18n/provider'
 
 export function Hero() {
+  const { t } = useI18n()
   const reduce = useReducedMotion()
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
@@ -62,13 +64,13 @@ export function Hero() {
           <Reveal>
             <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-accent/25 bg-accent-soft px-3 py-1.5 text-[0.72rem] font-semibold tracking-wide text-accent backdrop-blur-sm sm:mb-5 sm:px-3.5 sm:text-[0.78rem]">
               <Ix icon={Icons.spark} size={14} className="shrink-0" />
-              <span className="truncate">Available for international projects</span>
+              <span className="truncate">{t.hero.available}</span>
             </div>
           </Reveal>
 
           <Reveal delay={0.05}>
             <p className="text-[0.95rem] font-semibold tracking-wide text-accent sm:text-[1.05rem]">
-              Hello, I&apos;m
+              {t.hero.hello}
             </p>
           </Reveal>
 
@@ -83,27 +85,26 @@ export function Hero() {
                 {PROFILE.name}
               </motion.span>
               <span className="mt-2 block text-[clamp(1.35rem,5.2vw,2.85rem)] font-semibold tracking-[-0.03em] text-white/92 sm:mt-3">
-                {PROFILE.role}
+                {t.hero.role}
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-5 max-w-xl text-[0.98rem] leading-relaxed text-white/78 sm:mt-6 sm:text-[1.12rem] sm:leading-[1.75]">
-              I build exceptional digital products and business systems for companies in Indonesia,
-              the Netherlands, and around the world.
+              {t.hero.body}
             </p>
           </Reveal>
 
           <Reveal delay={0.22}>
             <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
               <Link href="/#projects" className="btn-primary sm:w-auto">
-                <span>View My Work</span>
+                <span>{t.hero.viewWork}</span>
                 <Ix icon={Icons.arrowRight} size={16} className="shrink-0" />
               </Link>
               <Link href="/#contact" className="btn-secondary sm:w-auto">
                 <Ix icon={Icons.mail} size={16} className="shrink-0" />
-                <span>Contact Me</span>
+                <span>{t.hero.contactMe}</span>
               </Link>
             </div>
           </Reveal>
@@ -111,7 +112,7 @@ export function Hero() {
           <Reveal delay={0.28}>
             <div className="mt-10 border-t border-white/10 pt-7 sm:mt-12 sm:pt-8">
               <p className="text-[0.78rem] font-medium tracking-wide text-white/55 sm:text-[0.8rem]">
-                Trusted by companies I&apos;ve shipped with
+                {t.hero.trusted}
               </p>
               <div className="mt-3.5 flex flex-wrap items-center gap-3 sm:mt-4 sm:gap-5">
                 {EXPERIENCE.map((job, i) => (
@@ -157,7 +158,7 @@ export function Hero() {
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  Full-stack · Remote
+                  {t.hero.badgeRemote}
                 </motion.div>
               ) : null}
 
@@ -196,11 +197,11 @@ export function Hero() {
                   <div className="flex items-center gap-2">
                     <span className="pulse-dot size-2 rounded-full bg-accent" />
                     <p className="text-[0.7rem] font-semibold tracking-[0.12em] text-accent uppercase sm:text-[0.72rem]">
-                      Available Now
+                      {t.hero.availableNow}
                     </p>
                   </div>
                   <p className="mt-1 text-[0.82rem] font-medium text-white sm:mt-1.5 sm:text-sm">
-                    International remote projects
+                    {t.hero.availableSub}
                   </p>
                 </motion.div>
               </motion.div>

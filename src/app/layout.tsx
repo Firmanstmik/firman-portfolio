@@ -4,6 +4,8 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { Providers } from '@/components/Providers'
+import { SkipLink } from '@/components/SkipLink'
 import { SITE } from '@/data/site'
 import './globals.css'
 
@@ -53,17 +55,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="overflow-x-clip bg-bg font-sans text-text antialiased">
-        <a
-          href="#home"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-3 focus:py-2 focus:text-bg"
-        >
-          Skip to content
-        </a>
-        <Navbar />
-        <main className="overflow-x-clip">{children}</main>
-        <Footer />
+        <Providers>
+          <SkipLink />
+          <Navbar />
+          <main className="overflow-x-clip">{children}</main>
+          <Footer />
+        </Providers>
         <Analytics />
         <SpeedInsights />
       </body>

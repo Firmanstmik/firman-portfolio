@@ -6,21 +6,24 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { Ix } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
-
-const links = [
-  { href: '/#home', label: 'Home' },
-  { href: '/#about', label: 'About' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#testimonials', label: 'Testimonials' },
-] as const
+import { LanguageSwitch } from '@/components/LanguageSwitch'
+import { useI18n } from '@/i18n/provider'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
 export function Navbar() {
+  const { t, locale } = useI18n()
   const reduce = useReducedMotion()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const links = [
+    { href: '/#home', label: t.nav.home },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#projects', label: t.nav.projects },
+    { href: '/#services', label: t.nav.services },
+    { href: '/#testimonials', label: t.nav.testimonials },
+  ] as const
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -84,12 +87,13 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <LanguageSwitch size="sm" />
           <Link
             href="/#contact"
             className="btn-primary btn-nav max-md:hidden md:inline-flex"
           >
-            <span>Hire Me</span>
+            <span>{t.nav.hireMe}</span>
             <Ix icon={Icons.export} size={14} />
           </Link>
 
@@ -98,7 +102,7 @@ export function Navbar() {
             className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white transition-colors hover:border-white/20 hover:bg-white/[0.08] lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <Ix icon={Icons.close} size={20} /> : <Ix icon={Icons.menu} size={20} />}
@@ -137,7 +141,7 @@ export function Navbar() {
               transition={{ duration: reduce ? 0 : 0.38, ease, delay: reduce ? 0 : 0.04 }}
             >
               <p className="mb-5 text-[0.72rem] font-semibold tracking-[0.18em] text-accent uppercase">
-                Navigate
+                {t.nav.navigate}
               </p>
 
               <nav className="flex flex-col gap-1">
@@ -169,7 +173,7 @@ export function Navbar() {
               </nav>
 
               <motion.div
-                className="mt-auto space-y-4 pt-8"
+                className="mt-auto space-y-5 pt-8"
                 initial={reduce ? false : { y: 16, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
@@ -179,17 +183,28 @@ export function Navbar() {
                 }}
               >
                 <div className="h-px w-full bg-gradient-to-r from-transparent via-white/12 to-transparent" />
+
+                <div className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3.5">
+                  <div>
+                    <p className="text-[0.72rem] font-semibold tracking-[0.14em] text-white/45 uppercase">
+                      {t.nav.language}
+                    </p>
+                    <p className="mt-1 text-sm text-white/70">
+                      {locale === 'id' ? 'English / Indonesia' : 'English / Indonesian'}
+                    </p>
+                  </div>
+                  <LanguageSwitch />
+                </div>
+
                 <Link
                   href="/#contact"
                   onClick={() => setOpen(false)}
                   className="btn-primary w-full"
                 >
-                  <span>Let&apos;s Talk</span>
+                  <span>{t.nav.letsTalk}</span>
                   <Ix icon={Icons.export} size={16} />
                 </Link>
-                <p className="text-center text-[0.78rem] text-white/40">
-                  Available for international projects
-                </p>
+                <p className="text-center text-[0.78rem] text-white/40">{t.nav.available}</p>
               </motion.div>
             </motion.div>
           </motion.div>

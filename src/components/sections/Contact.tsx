@@ -1,10 +1,15 @@
+'use client'
+
 import Link from 'next/link'
 import { SITE } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { Ix } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
+import { useI18n } from '@/i18n/provider'
 
 export function Contact() {
+  const { t } = useI18n()
+
   return (
     <section id="contact" className="section-y border-t border-white/8">
       <div className="section-pad container-max">
@@ -19,20 +24,19 @@ export function Contact() {
               className="pointer-events-none absolute inset-0 opacity-40 noise"
             />
             <div className="relative mx-auto max-w-2xl text-center">
-              <p className="eyebrow justify-center before:hidden">Let&apos;s Work Together</p>
+              <p className="eyebrow justify-center before:hidden">{t.contact.eyebrow}</p>
               <h2 className="mt-5 text-[clamp(2rem,8vw,4rem)] font-semibold tracking-tight text-balance">
-                Have a Project
+                {t.contact.titleLine1}
                 <br />
-                in Mind?
+                {t.contact.titleLine2}
               </h2>
               <p className="mx-auto mt-5 max-w-lg text-[1rem] text-muted sm:text-[1.05rem]">
-                I&apos;m always open to new opportunities and exciting projects. Let&apos;s build
-                something great together.
+                {t.contact.lead}
               </p>
 
               <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:justify-center sm:gap-3.5">
                 <Link href={`mailto:${SITE.email}`} className="btn-primary sm:w-auto">
-                  <span>Get In Touch</span>
+                  <span>{t.contact.getInTouch}</span>
                   <Ix icon={Icons.export} size={16} className="shrink-0" />
                 </Link>
                 <Link
@@ -42,7 +46,7 @@ export function Contact() {
                   className="btn-secondary sm:w-auto"
                 >
                   <Ix icon={Icons.whatsapp} size={16} className="shrink-0" />
-                  <span>WhatsApp</span>
+                  <span>{t.contact.whatsapp}</span>
                 </Link>
               </div>
 
@@ -61,7 +65,7 @@ export function Contact() {
                   className="inline-flex items-center gap-2 transition-colors hover:text-accent"
                 >
                   <Ix icon={Icons.link} size={16} />
-                  GitHub
+                  {t.footer.github}
                 </a>
               </div>
             </div>

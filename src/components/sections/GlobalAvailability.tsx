@@ -1,8 +1,13 @@
+'use client'
+
 import { Reveal } from '@/components/ui/Reveal'
 import { Ix } from '@/components/ui/Ix'
 import { Icons } from '@/components/ui/icons'
+import { useI18n } from '@/i18n/provider'
 
 export function GlobalAvailability() {
+  const { t } = useI18n()
+
   return (
     <section className="border-y border-white/8 bg-surface/30 py-14 sm:py-16">
       <div className="section-pad container-max">
@@ -11,17 +16,17 @@ export function GlobalAvailability() {
             <div>
               <p className="eyebrow inline-flex items-center gap-2">
                 <Ix icon={Icons.global} size={14} />
-                Working Globally
+                {t.global.eyebrow}
               </p>
               <h2 className="mt-3 text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold tracking-tight">
-                Indonesia → Worldwide
+                {t.global.title}
               </h2>
               <p className="mt-3 max-w-lg text-muted">
-                Remote-first collaboration across time zones — clear communication, reliable delivery.
+                {t.global.lead}
               </p>
             </div>
             <div className="flex flex-wrap gap-2.5">
-              {['Indonesia', 'Netherlands', 'Remote EU', 'Global'].map((place) => (
+              {t.global.places.map((place) => (
                 <span
                   key={place}
                   className="rounded-full border border-white/10 bg-white/[0.02] px-3.5 py-1.5 text-[0.8rem] text-muted"
