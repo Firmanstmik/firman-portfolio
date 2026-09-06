@@ -1,13 +1,13 @@
 export const SITE = {
   name: 'FIRMANLABS',
-  title: 'Firman — Full-Stack Developer | Digital Products & Business Systems',
+  title: 'Firman · Full Stack Developer | Digital Products & Business Systems',
   description:
-    'Full-stack developer building scalable web applications, SaaS platforms, APIs, and business systems for clients worldwide.',
+    'Full stack developer building scalable web applications, SaaS platforms, APIs, and business systems for clients worldwide.',
   url: 'https://www.firmanlabs.my.id',
   email: 'firmanmaulanastmik@gmail.com',
   github: 'https://github.com/Firmanstmik',
   whatsapp: 'https://wa.me/6281236893055',
-  phoneDisplay: '+62 812-3689-3055',
+  phoneDisplay: '+62 812 3689 3055',
 } as const
 
 export const PROFILE = {
@@ -17,13 +17,13 @@ export const PROFILE = {
   major: 'Teknik Informatika',
   campus: 'STMIK Lombok',
   campusFull: 'Sekolah Tinggi Manajemen Informatika dan Komputer Lombok',
-  role: 'Full-stack Developer',
+  role: 'Full stack Developer',
   location: 'Based in Indonesia',
   availability: 'Available for international projects',
   avatar: '/img/firman_img.webp',
   headline: ['I Build Digital Products', 'That Move Businesses', 'Forward.'],
   subcopy:
-    'Full-stack developer building scalable SaaS, business platforms, APIs, and AI-powered systems for companies that need more than just a website.',
+    'Full stack developer building scalable SaaS, business platforms, APIs, and AI powered systems for companies that need more than just a website.',
 } as const
 
 export const STATS = [
@@ -34,7 +34,7 @@ export const STATS = [
 ] as const
 
 export const TERMINAL_LINES = [
-  'Full-stack Developer',
+  'Full stack Developer',
   'Problem Solver',
   'System Builder',
   'Remote Worker',
@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
     category: 'Property / Intelligence',
     tagline: 'Property intelligence for Lombok investment',
     summary:
-      'Premium real-estate intelligence platform with curated assets, area research, trust architecture, and private consultation flows for investors.',
+      'Premium real estate intelligence platform with curated assets, area research, trust architecture, and private consultation flows for investors.',
     url: 'https://lirepglobal.com/',
     image: '/projects/lirep.jpg',
     status: 'live',
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     company: 'LIREP',
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'CMS'],
     role: [
-      'Full-stack / Product Engineer',
+      'Full stack / Product Engineer',
       'System architecture',
       'Investment UX',
       'Lead & consultation flows',
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     ],
     challenges: [
       'Balancing editorial luxury with dense market data',
-      'Structuring trust signals for high-consideration buyers',
+      'Structuring trust signals for high consideration buyers',
     ],
     results: [
       'Live production platform serving Lombok investors',
@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     tech: ['React', 'TypeScript', 'Node.js', 'PWA'],
     role: [
-      'Full-stack Developer',
+      'Full stack Developer',
       'Marketplace UX',
       'Booking flows',
       'WhatsApp conversion',
@@ -127,20 +127,20 @@ export const PROJECTS: Project[] = [
     problem:
       'Hospitality operators needed a reliable way to outsource cleaning with clear packages and fast booking.',
     solution:
-      'Shipped a conversion-focused marketplace with package storytelling, booking paths, and WhatsApp-first operations.',
+      'Shipped a conversion focused marketplace with package storytelling, booking paths, and WhatsApp first operations.',
     features: [
       'Hospitality packages',
       'Web app booking',
       'WhatsApp admin chat',
-      'Multi-location coverage',
+      'Multi location coverage',
     ],
     challenges: [
       'Designing for both guests and operations teams',
-      'Keeping conversion simple across mobile-first users',
+      'Keeping conversion simple across mobile first users',
     ],
     results: [
       'Live booking surface for Lombok hospitality partners',
-      'WhatsApp-driven operational handoff',
+      'WhatsApp driven operational handoff',
     ],
   },
   {
@@ -157,13 +157,13 @@ export const PROJECTS: Project[] = [
     featured: true,
     tech: ['Laravel', 'MySQL', 'WhatsApp', 'Booking'],
     role: [
-      'Full-stack Developer',
+      'Full stack Developer',
       'Booking system',
       'Fleet & pricing UX',
       'Operations automation',
     ],
     problem:
-      'The rental business needed a production booking system that matched real fleet operations and WhatsApp-driven sales.',
+      'The rental business needed a production booking system that matched real fleet operations and WhatsApp driven sales.',
     solution:
       'Engineered fleet pricing, booking journeys, airport transfer packages, and content that supports conversion and trust.',
     features: [
@@ -195,7 +195,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     tech: ['React', 'Node.js', 'LMS', 'Auth'],
     role: [
-      'Full-stack Developer',
+      'Full stack Developer',
       'Learning UX',
       'Dashboards',
       'Enrollment journeys',
@@ -233,7 +233,7 @@ export const PROJECTS: Project[] = [
     featured: false,
     tech: ['Next.js', 'Web Scraping', 'Data Pipeline', 'Analytics'],
     role: [
-      'Full-stack Developer',
+      'Full stack Developer',
       'Scraping architecture',
       'Data normalization',
       'Dashboard UX',
@@ -243,7 +243,7 @@ export const PROJECTS: Project[] = [
     solution:
       'Built a modular scraping and normalization pipeline with a live program catalog and ecosystem insights.',
     features: [
-      'Multi-source web scraping pipeline',
+      'Multi source web scraping pipeline',
       'Normalization & deduplication',
       'Program catalog + dimension filters',
       'Ecosystem insights dashboards',
@@ -260,7 +260,7 @@ export const PROJECTS: Project[] = [
   {
     slug: 'keuken-centrum',
     code: '06',
-    title: 'Keuken-Centrum Utrecht',
+    title: 'Keuken Centrum Utrecht',
     category: 'Conversion / Brand',
     tagline: 'Premium kitchen destination Utrecht',
     summary:
@@ -290,7 +290,7 @@ export const PROJECTS: Project[] = [
     category: 'B2B / Conversion',
     tagline: 'Premium Halal meat wholesaler (NL)',
     summary:
-      'High-conversion B2B website for Ayat Food with Halal product catalog, trust pillars, and quote request flows.',
+      'High conversion B2B website for Ayat Food with Halal product catalog, trust pillars, and quote request flows.',
     url: 'https://ipekcislachterij.localclicks.nl/',
     image: '/projects/ayatfood.jpg',
     status: 'live',
@@ -323,17 +323,17 @@ export const PROJECTS: Project[] = [
     featured: false,
     company: 'Ukonnect',
     tech: ['Next.js', 'AI UX', 'Growth Systems'],
-    role: ['Full-stack Developer', 'Product marketing UX', 'Conversion architecture'],
+    role: ['Full stack Developer', 'Product marketing UX', 'Conversion architecture'],
     problem: 'An AI growth product needed a clear narrative from audit to automation.',
-    solution: 'Built system storytelling, partner proof, and book-a-call conversion paths.',
+    solution: 'Built system storytelling, partner proof, and book a call conversion paths.',
     features: [
       'System storytelling',
       'Partner social proof',
       'Audit → automate funnel',
-      'Book-a-call conversion',
+      'Book a call conversion',
     ],
     challenges: ['Explaining complex AI systems without fluff'],
-    results: ['In-build product marketing surface for Ukonnect'],
+    results: ['In build product marketing surface for Ukonnect'],
   },
   {
     slug: 'rijschool-via-via',
@@ -342,7 +342,7 @@ export const PROJECTS: Project[] = [
     category: 'Conversion / Brand',
     tagline: 'Premium rijopleiding in Leiderdorp',
     summary:
-      'Premium driving school website for Rijschool Via Via in Leiderdorp — calm brand storytelling, trust signals, regional coverage, and conversion paths for trial lessons.',
+      'Premium driving school website for Rijschool Via Via in Leiderdorp · calm brand storytelling, trust signals, regional coverage, and conversion paths for trial lessons.',
     url: 'https://rijschool-via-via.vercel.app/',
     image: '/projects/rijschool.jpg',
     status: 'live',
@@ -363,10 +363,10 @@ export const PROJECTS: Project[] = [
       'Premium brand storytelling',
       'Method & trust architecture',
       'Regional coverage UX',
-      'Trial-lesson conversion paths',
+      'Trial lesson conversion paths',
     ],
     challenges: [
-      'Translating a calm in-person teaching philosophy into web pacing',
+      'Translating a calm in person teaching philosophy into web pacing',
       'Balancing luxury tone with clear booking/contact conversion',
     ],
     results: [
@@ -385,12 +385,12 @@ export const SERVICES = [
   {
     code: '02',
     title: 'Mobile Applications',
-    desc: 'Cross-platform apps with Flutter, Dart, Kotlin, and progressive web experiences.',
+    desc: 'Cross platform apps with Flutter, Dart, Kotlin, and progressive web experiences.',
   },
   {
     code: '03',
     title: 'API & Backend',
-    desc: 'Scalable APIs, authentication, databases, and system architecture end-to-end.',
+    desc: 'Scalable APIs, authentication, databases, and system architecture end to end.',
   },
   {
     code: '04',
@@ -430,7 +430,7 @@ export const PRINCIPLES = [
   },
   {
     code: '02',
-    title: 'Full-Stack Ownership',
+    title: 'Full Stack Ownership',
     desc: 'Frontend → Backend → Database → Deployment under one accountable owner.',
   },
   {
@@ -476,12 +476,12 @@ export const PROCESS = [
 export const EXPERIENCE = [
   {
     company: 'Ukonnect',
-    role: 'Full-stack Developer',
+    role: 'Full stack Developer',
     type: 'Remote · Netherlands / Global',
     period: 'Present',
     url: 'https://ukonnect.ai/en/about',
     logo: '/logos/ukonnect.webp',
-    desc: 'Building premium conversion websites and AI-powered growth platforms for Ukonnect partners across real estate, hospitality, and B2B.',
+    desc: 'Building premium conversion websites and AI powered growth platforms for Ukonnect partners across real estate, hospitality, and B2B.',
     highlights: [
       'Premium brand websites for NL clients',
       'AI growth product surfaces (WhiteLabel.ai)',
@@ -497,22 +497,22 @@ export const EXPERIENCE = [
     logo: '/logos/lirep.webp',
     desc: 'Engineering the LIREP Global platform: property intelligence, curated investment assets, area research, and advisory journeys.',
     highlights: [
-      'Investment-grade property UX',
+      'Investment grade property UX',
       'Area & market intelligence surfaces',
       'Private consultation & lead flows',
     ],
   },
 ] as const
 
-/** Real testimonials only — updated to match current production work */
+/** Real testimonials only · updated to match current production work */
 export const TESTIMONIALS = [
   {
-    name: 'Prof Khairul Imtihan S.Kom., M.Kom',
-    role: 'Kepala Departemen, STMIK Lombok',
-    company: 'Education platforms',
-    initial: 'K',
+    name: 'Abdurahman, S.E.',
+    role: 'Direktur',
+    company: 'Bali Tosha Lombok Kochi',
+    initial: 'A',
     quote:
-      'Firman helped us shape learning flows that feel modern and reliable. From course structure to student-facing UX, the delivery matched what an education platform needs in production.',
+      'Firman helped us shape training and program flows that feel modern and reliable. From program structure to participant facing UX, the delivery matched what a training institution needs in production.',
     rating: 5,
   },
   {
@@ -521,7 +521,7 @@ export const TESTIMONIALS = [
     company: 'LIREP Global',
     initial: 'L',
     quote:
-      'The LIREP experience needed clarity for investors: curated assets, area intelligence, and trust-driven journeys. Firman translated that into a premium product surface that feels ready for real consultations.',
+      'The LIREP experience needed clarity for investors: curated assets, area intelligence, and trust driven journeys. Firman translated that into a premium product surface that feels ready for real consultations.',
     rating: 5,
   },
   {

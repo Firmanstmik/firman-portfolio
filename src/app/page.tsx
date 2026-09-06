@@ -21,7 +21,7 @@ const jsonLd = {
   sameAs: [SITE.github],
   alumniOf: PROFILE.campusFull,
   knowsAbout: [
-    'Full-stack development',
+    'Full stack development',
     'SaaS',
     'API design',
     'System architecture',

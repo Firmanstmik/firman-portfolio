@@ -159,19 +159,19 @@ export const en: Dictionary = {
   hero: {
     available: 'Available for international projects',
     hello: "Hello, I'm",
-    role: 'Full-stack Developer',
+    role: 'Full stack Developer',
     body: 'I build exceptional digital products and business systems for companies in Indonesia, the Netherlands, and around the world.',
     viewWork: 'View My Work',
     contactMe: 'Contact Me',
     trusted: "Trusted by companies I've shipped with",
-    badgeRemote: 'Full-stack · Remote',
+    badgeRemote: 'Full stack · Remote',
     availableNow: 'Available Now',
     availableSub: 'International remote projects',
   },
   projects: {
     eyebrow: 'Selected Work',
     title: 'Featured Projects',
-    lead: 'Real systems shipped for businesses, organizations, and startups — not demos, not templates.',
+    lead: 'Real systems shipped for businesses, organizations, and startups · not demos, not templates.',
     viewAll: 'View All Projects',
     viewCase: 'View Case Study',
     live: 'Live',
@@ -179,7 +179,7 @@ export const en: Dictionary = {
     allEyebrow: 'All Work',
     allTitle: 'Projects',
     allLead:
-      'Real systems shipped for businesses, organizations, and startups — from marketplaces and booking platforms to intelligence products and conversion websites.',
+      'Real systems shipped for businesses, organizations, and startups · from marketplaces and booking platforms to intelligence products and conversion websites.',
     backHome: 'Back to home',
     backProjects: 'Back to projects',
     openLive: 'Open Live Site',
@@ -194,8 +194,8 @@ export const en: Dictionary = {
   },
   services: {
     eyebrow: 'What I Do',
-    title: 'End-to-End Development',
-    lead: 'From idea to deployment, I own the full path — product thinking, engineering, and shipping.',
+    title: 'End to End Development',
+    lead: 'From idea to deployment, I own the full path · product thinking, engineering, and shipping.',
     items: [
       {
         title: 'Web Applications',
@@ -203,11 +203,11 @@ export const en: Dictionary = {
       },
       {
         title: 'Mobile Applications',
-        desc: 'Cross-platform apps with Flutter, Dart, Kotlin, and progressive web experiences.',
+        desc: 'Cross platform apps with Flutter, Dart, Kotlin, and progressive web experiences.',
       },
       {
         title: 'API & Backend',
-        desc: 'Scalable APIs, authentication, databases, and system architecture end-to-end.',
+        desc: 'Scalable APIs, authentication, databases, and system architecture end to end.',
       },
       {
         title: 'Deployment & DevOps',
@@ -218,11 +218,11 @@ export const en: Dictionary = {
   stack: {
     eyebrow: 'Tech Stack',
     title: 'Technologies I Work With',
-    lead: 'Modern, reliable tools chosen for production systems — not trend chasing.',
+    lead: 'Modern, reliable tools chosen for production systems · not trend chasing.',
   },
   principles: {
     eyebrow: 'Engineering Approach',
-    title: 'Built For Real-World Problems.',
+    title: 'Built For Real World Problems.',
     lead: 'I engineer systems that survive real users, real deadlines, and real business pressure.',
     items: [
       {
@@ -230,7 +230,7 @@ export const en: Dictionary = {
         desc: 'Systems designed to work in real business environments, not demos.',
       },
       {
-        title: 'Full-Stack Ownership',
+        title: 'Full Stack Ownership',
         desc: 'Frontend → Backend → Database → Deployment under one accountable owner.',
       },
       {
@@ -246,7 +246,7 @@ export const en: Dictionary = {
   process: {
     eyebrow: 'My Process',
     title: 'From discovery to iteration',
-    lead: 'A clear path from business problem to production system — with ownership at every step.',
+    lead: 'A clear path from business problem to production system · with ownership at every step.',
     items: [
       { title: 'Discover', desc: 'Understand the business, users, and requirements.' },
       { title: 'Plan', desc: 'Architecture, technology, database, and roadmap.' },
@@ -263,7 +263,7 @@ export const en: Dictionary = {
   about: {
     eyebrow: 'About',
     title: 'More Than A Developer.',
-    p1: "I'm Firman Maulana, S.Kom, a full-stack developer focused on building digital products, business platforms, and systems that solve real problems.",
+    p1: "I'm Firman Maulana, S.Kom, a full stack developer focused on building digital products, business platforms, and systems that solve real problems.",
     p2: 'Graduate of Teknik Informatika at Sekolah Tinggi Manajemen Informatika dan Komputer Lombok. I work across frontend, backend, databases, APIs, cloud deployment, and system architecture.',
     p3: 'Currently shipping remotely with Ukonnect and LIREP Global across Indonesia and Europe.',
     tags: ['Based in Indonesia', 'Remote', 'Available Worldwide'],
@@ -273,8 +273,8 @@ export const en: Dictionary = {
   },
   global: {
     eyebrow: 'Working Globally',
-    title: 'Indonesia → Worldwide',
-    lead: 'Remote-first collaboration across time zones — clear communication, reliable delivery.',
+    title: 'Indonesia to Worldwide',
+    lead: 'Remote first collaboration across time zones · clear communication, reliable delivery.',
     places: ['Indonesia', 'Netherlands', 'Remote EU', 'Global'],
   },
   contact: {
@@ -286,7 +286,7 @@ export const en: Dictionary = {
     whatsapp: 'WhatsApp',
   },
   footer: {
-    blurb: 'Full-stack developer building digital products and business systems.',
+    blurb: 'Full stack developer building digital products and business systems.',
     navigation: 'Navigation',
     connect: 'Connect',
     email: 'Email',
@@ -302,9 +302,9 @@ export const en: Dictionary = {
   },
   experience: {
     Ukonnect: {
-      role: 'Full-stack Developer',
+      role: 'Full stack Developer',
       type: 'Remote · Netherlands / Global',
-      desc: 'Building premium conversion websites and AI-powered growth platforms for Ukonnect partners across real estate, hospitality, and B2B.',
+      desc: 'Building premium conversion websites and AI powered growth platforms for Ukonnect partners across real estate, hospitality, and B2B.',
       highlights: [
         'Premium brand websites for NL clients',
         'AI growth product surfaces (WhiteLabel.ai)',
@@ -316,24 +316,24 @@ export const en: Dictionary = {
       type: 'Remote · Lombok Property Intelligence',
       desc: 'Engineering the LIREP Global platform: property intelligence, curated investment assets, area research, and advisory journeys.',
       highlights: [
-        'Investment-grade property UX',
+        'Investment grade property UX',
         'Area & market intelligence surfaces',
         'Private consultation & lead flows',
       ],
     },
   },
   testimonialsItems: {
-    'Prof Khairul Imtihan S.Kom., M.Kom': {
-      role: 'Kepala Departemen, STMIK Lombok',
-      company: 'Education platforms',
+    'Abdurahman, S.E.': {
+      role: 'Director',
+      company: 'Bali Tosha Lombok Kochi',
       quote:
-        'Firman helped us shape learning flows that feel modern and reliable. From course structure to student-facing UX, the delivery matched what an education platform needs in production.',
+        'Firman helped us shape training and program flows that feel modern and reliable. From program structure to participant facing UX, the delivery matched what a training institution needs in production.',
     },
     'LIREP Product Stakeholder': {
       role: 'Product stakeholder',
       company: 'LIREP Global',
       quote:
-        'The LIREP experience needed clarity for investors: curated assets, area intelligence, and trust-driven journeys. Firman translated that into a premium product surface that feels ready for real consultations.',
+        'The LIREP experience needed clarity for investors: curated assets, area intelligence, and trust driven journeys. Firman translated that into a premium product surface that feels ready for real consultations.',
     },
     'Agus Harianto': {
       role: 'Owner, PT Bagus Unik Raya',
@@ -347,9 +347,9 @@ export const en: Dictionary = {
       category: 'Property / Intelligence',
       tagline: 'Property intelligence for Lombok investment',
       summary:
-        'Premium real-estate intelligence platform with curated assets, area research, trust architecture, and private consultation flows for investors.',
+        'Premium real estate intelligence platform with curated assets, area research, trust architecture, and private consultation flows for investors.',
       role: [
-        'Full-stack / Product Engineer',
+        'Full stack / Product Engineer',
         'System architecture',
         'Investment UX',
         'Lead & consultation flows',
@@ -367,7 +367,7 @@ export const en: Dictionary = {
       ],
       challenges: [
         'Balancing editorial luxury with dense market data',
-        'Structuring trust signals for high-consideration buyers',
+        'Structuring trust signals for high consideration buyers',
       ],
       results: [
         'Live production platform serving Lombok investors',
@@ -379,24 +379,24 @@ export const en: Dictionary = {
       tagline: 'Hospitality outsourcing marketplace',
       summary:
         'Professional cleaning and hospitality outsourcing for hotels, villas, and restaurants across Lombok, with booking packages and WhatsApp conversion.',
-      role: ['Full-stack Developer', 'Marketplace UX', 'Booking flows', 'WhatsApp conversion'],
+      role: ['Full stack Developer', 'Marketplace UX', 'Booking flows', 'WhatsApp conversion'],
       problem:
         'Hospitality operators needed a reliable way to outsource cleaning with clear packages and fast booking.',
       solution:
-        'Shipped a conversion-focused marketplace with package storytelling, booking paths, and WhatsApp-first operations.',
+        'Shipped a conversion focused marketplace with package storytelling, booking paths, and WhatsApp first operations.',
       features: [
         'Hospitality packages',
         'Web app booking',
         'WhatsApp admin chat',
-        'Multi-location coverage',
+        'Multi location coverage',
       ],
       challenges: [
         'Designing for both guests and operations teams',
-        'Keeping conversion simple across mobile-first users',
+        'Keeping conversion simple across mobile first users',
       ],
       results: [
         'Live booking surface for Lombok hospitality partners',
-        'WhatsApp-driven operational handoff',
+        'WhatsApp driven operational handoff',
       ],
     },
     'lombok-rentals': {
@@ -404,9 +404,9 @@ export const en: Dictionary = {
       tagline: 'Car rental Lombok, self drive & chauffeur',
       summary:
         'Full rental platform with fleet pricing, WhatsApp booking, airport transfer services, travel guides, and Google review social proof.',
-      role: ['Full-stack Developer', 'Booking system', 'Fleet & pricing UX', 'Operations automation'],
+      role: ['Full stack Developer', 'Booking system', 'Fleet & pricing UX', 'Operations automation'],
       problem:
-        'The rental business needed a production booking system that matched real fleet operations and WhatsApp-driven sales.',
+        'The rental business needed a production booking system that matched real fleet operations and WhatsApp driven sales.',
       solution:
         'Engineered fleet pricing, booking journeys, airport transfer packages, and content that supports conversion and trust.',
       features: [
@@ -429,7 +429,7 @@ export const en: Dictionary = {
       tagline: 'Learning platform for Indonesia',
       summary:
         'EdTech platform connecting students, teachers, and institutions with courses, live classes, certificates, and official education information.',
-      role: ['Full-stack Developer', 'Learning UX', 'Dashboards', 'Enrollment journeys'],
+      role: ['Full stack Developer', 'Learning UX', 'Dashboards', 'Enrollment journeys'],
       problem:
         'Education stakeholders needed a modern learning surface connecting students, teachers, and institutions.',
       solution:
@@ -454,12 +454,12 @@ export const en: Dictionary = {
       tagline: 'Netherlands education data intelligence',
       summary:
         'Live intelligence platform that scrapes and normalizes Dutch education programs across institutions, with filters, catalogs, and ecosystem analytics.',
-      role: ['Full-stack Developer', 'Scraping architecture', 'Data normalization', 'Dashboard UX'],
+      role: ['Full stack Developer', 'Scraping architecture', 'Data normalization', 'Dashboard UX'],
       problem: 'Manual education research across Dutch institutions does not scale.',
       solution:
         'Built a modular scraping and normalization pipeline with a live program catalog and ecosystem insights.',
       features: [
-        'Multi-source web scraping pipeline',
+        'Multi source web scraping pipeline',
         'Normalization & deduplication',
         'Program catalog + dimension filters',
         'Ecosystem insights dashboards',
@@ -494,7 +494,7 @@ export const en: Dictionary = {
       category: 'B2B / Conversion',
       tagline: 'Premium Halal meat wholesaler (NL)',
       summary:
-        'High-conversion B2B website for Ayat Food with Halal product catalog, trust pillars, and quote request flows.',
+        'High conversion B2B website for Ayat Food with Halal product catalog, trust pillars, and quote request flows.',
       role: ['Frontend Developer', 'Conversion UX', 'Trust architecture'],
       problem: 'B2B buyers needed trust and a clear path to request quotes.',
       solution: 'Shipped assortment UX, certification storytelling, and quote funnels for NL market.',
@@ -512,23 +512,23 @@ export const en: Dictionary = {
       tagline: 'AI growth systems by Ukonnect',
       summary:
         'Product marketing site for WhiteLabel.ai covering AI lead generation, sales automation, and connected growth systems.',
-      role: ['Full-stack Developer', 'Product marketing UX', 'Conversion architecture'],
+      role: ['Full stack Developer', 'Product marketing UX', 'Conversion architecture'],
       problem: 'An AI growth product needed a clear narrative from audit to automation.',
-      solution: 'Built system storytelling, partner proof, and book-a-call conversion paths.',
+      solution: 'Built system storytelling, partner proof, and book a call conversion paths.',
       features: [
         'System storytelling',
         'Partner social proof',
         'Audit → automate funnel',
-        'Book-a-call conversion',
+        'Book a call conversion',
       ],
       challenges: ['Explaining complex AI systems without fluff'],
-      results: ['In-build product marketing surface for Ukonnect'],
+      results: ['In build product marketing surface for Ukonnect'],
     },
     'rijschool-via-via': {
       category: 'Conversion / Brand',
       tagline: 'Premium rijopleiding in Leiderdorp',
       summary:
-        'Premium driving school website for Rijschool Via Via in Leiderdorp — calm brand storytelling, trust signals, regional coverage, and conversion paths for trial lessons.',
+        'Premium driving school website for Rijschool Via Via in Leiderdorp · calm brand storytelling, trust signals, regional coverage, and conversion paths for trial lessons.',
       role: ['Frontend Developer', 'Brand storytelling', 'Conversion UX', 'Deployment'],
       problem:
         'A premium Dutch driving school needed a calm, trustworthy digital presence that converts trial lessons without feeling pushy.',
@@ -538,10 +538,10 @@ export const en: Dictionary = {
         'Premium brand storytelling',
         'Method & trust architecture',
         'Regional coverage UX',
-        'Trial-lesson conversion paths',
+        'Trial lesson conversion paths',
       ],
       challenges: [
-        'Translating a calm in-person teaching philosophy into web pacing',
+        'Translating a calm in person teaching philosophy into web pacing',
         'Balancing luxury tone with clear booking/contact conversion',
       ],
       results: [
