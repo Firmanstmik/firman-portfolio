@@ -20,7 +20,7 @@ export const PROFILE = {
   role: 'Full-stack Developer',
   location: 'Based in Indonesia',
   availability: 'Available for international projects',
-  avatar: '/img/profil.webp',
+  avatar: '/img/firman_img.webp',
   headline: ['I Build Digital Products', 'That Move Businesses', 'Forward.'],
   subcopy:
     'Full-stack developer building scalable SaaS, business platforms, APIs, and AI-powered systems for companies that need more than just a website.',

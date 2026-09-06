@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     title: SITE.title,
     description: SITE.description,
     siteName: SITE.name,
-    images: [{ url: '/img/profil.webp', width: 800, height: 1000, alt: 'Firman Maulana' }],
+    images: [{ url: '/img/firman_img.webp', width: 800, height: 1000, alt: 'Firman Maulana' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.title,
     description: SITE.description,
-    images: ['/img/profil.webp'],
+    images: ['/img/firman_img.webp'],
   },
   robots: {
     index: true,

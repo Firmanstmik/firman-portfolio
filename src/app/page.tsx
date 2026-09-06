@@ -17,7 +17,7 @@ const jsonLd = {
   jobTitle: PROFILE.role,
   url: SITE.url,
   email: SITE.email,
-  image: `${SITE.url}/img/profil.webp`,
+  image: `${SITE.url}/img/firman_img.webp`,
   sameAs: [SITE.github],
   alumniOf: PROFILE.campusFull,
   knowsAbout: [
