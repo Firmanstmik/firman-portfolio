@@ -26,6 +26,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -44,7 +45,8 @@
 
   body {
     margin: 0;
-    min-width: 320px;
+    min-width: 0;
+    max-width: 100%;
     overflow-x: clip;
     background: var(--color-bg);
     color: var(--color-text);
@@ -76,6 +78,141 @@
   }
 }
 
+/* Button styles in components so Tailwind utilities (hidden / md:inline-flex) win */
+@layer components {
+  .btn-primary,
+  .btn-secondary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 52px;
+    max-width: 100%;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0.9rem 1.55rem;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition:
+      color 280ms var(--ease-out-expo),
+      border-color 280ms var(--ease-out-expo),
+      transform 220ms var(--ease-out-expo),
+      box-shadow 220ms var(--ease-out-expo);
+  }
+
+  @media (max-width: 640px) {
+    .btn-primary:not(.btn-nav),
+    .btn-secondary:not(.btn-nav) {
+      min-height: 48px;
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9rem;
+      box-shadow: none;
+    }
+
+    .btn-primary:not(.btn-nav):hover,
+    .btn-secondary:not(.btn-nav):hover {
+      transform: none;
+    }
+  }
+
+  .btn-primary span,
+  .btn-primary svg,
+  .btn-secondary span,
+  .btn-secondary svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-primary::before,
+  .btn-secondary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    transform: translateX(-101%);
+    transition: transform 420ms var(--ease-out-expo);
+  }
+
+  .btn-primary:hover::before,
+  .btn-primary:focus-visible::before,
+  .btn-secondary:hover::before,
+  .btn-secondary:focus-visible::before {
+    transform: translateX(0);
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary::before,
+    .btn-secondary::before {
+      transition: none;
+      transform: none;
+      opacity: 0;
+    }
+
+    .btn-primary:hover::before,
+    .btn-primary:focus-visible::before,
+    .btn-secondary:hover::before,
+    .btn-secondary:focus-visible::before {
+      opacity: 1;
+    }
+  }
+
+  .btn-primary {
+    border: 1.5px solid var(--color-accent);
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 12px 28px -14px rgba(47, 128, 255, 0.75);
+  }
+
+  .btn-primary::before {
+    background: #ffffff;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    color: #07111f;
+    border-color: #ffffff;
+    box-shadow: 0 14px 32px -16px rgba(255, 255, 255, 0.35);
+  }
+
+  .btn-secondary {
+    border: 1.5px solid var(--color-accent);
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .btn-secondary::before {
+    background: var(--color-accent);
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    color: #ffffff;
+    border-color: var(--color-accent);
+    box-shadow: 0 14px 32px -16px rgba(47, 128, 255, 0.7);
+  }
+
+  .btn-nav {
+    width: auto;
+    max-width: none;
+    min-height: 42px;
+    padding: 0.55rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    box-shadow: none;
+  }
+}
+
 @layer utilities {
   .section-pad {
     padding-inline: clamp(1.5rem, 5.5vw, 5.5rem);
@@ -83,7 +220,7 @@
 
   @media (max-width: 480px) {
     .section-pad {
-      padding-inline: 1.35rem;
+      padding-inline: 1.25rem;
     }
   }
 
@@ -149,137 +286,6 @@
       0 1px 0 rgba(255, 255, 255, 0.04) inset,
       0 24px 48px -28px rgba(0, 0, 0, 0.65),
       0 0 0 1px rgba(47, 128, 255, 0.1);
-  }
-
-  /* Premium swipe buttons */
-  .btn-primary,
-  .btn-secondary {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.55rem;
-    min-height: 52px;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0.9rem 1.55rem;
-    overflow: hidden;
-    isolation: isolate;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    transition:
-      color 280ms var(--ease-out-expo),
-      border-color 280ms var(--ease-out-expo),
-      transform 220ms var(--ease-out-expo),
-      box-shadow 220ms var(--ease-out-expo);
-  }
-
-  @media (max-width: 640px) {
-    .btn-primary,
-    .btn-secondary {
-      min-height: 48px;
-      width: 100%;
-      padding: 0.85rem 1.25rem;
-      font-size: 0.9rem;
-      box-shadow: none;
-    }
-
-    .btn-primary:hover,
-    .btn-secondary:hover {
-      transform: none;
-    }
-  }
-
-  .btn-primary span,
-  .btn-primary svg,
-  .btn-secondary span,
-  .btn-secondary svg {
-    position: relative;
-    z-index: 1;
-  }
-
-  .btn-primary::before,
-  .btn-secondary::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    transform: translateX(-101%);
-    transition: transform 420ms var(--ease-out-expo);
-  }
-
-  .btn-primary:hover::before,
-  .btn-primary:focus-visible::before,
-  .btn-secondary:hover::before,
-  .btn-secondary:focus-visible::before {
-    transform: translateX(0);
-  }
-
-  .btn-primary:hover,
-  .btn-secondary:hover {
-    transform: translateY(-1px);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .btn-primary::before,
-    .btn-secondary::before {
-      transition: none;
-      transform: none;
-      opacity: 0;
-    }
-
-    .btn-primary:hover::before,
-    .btn-primary:focus-visible::before,
-    .btn-secondary:hover::before,
-    .btn-secondary:focus-visible::before {
-      opacity: 1;
-    }
-  }
-
-  /* Solid blue → swipe to white, text becomes dark */
-  .btn-primary {
-    border: 1.5px solid var(--color-accent);
-    background: var(--color-accent);
-    color: #fff;
-    box-shadow: 0 12px 28px -14px rgba(47, 128, 255, 0.75);
-  }
-
-  .btn-primary::before {
-    background: #ffffff;
-  }
-
-  .btn-primary:hover,
-  .btn-primary:focus-visible {
-    color: #07111f;
-    border-color: #ffffff;
-    box-shadow: 0 14px 32px -16px rgba(255, 255, 255, 0.35);
-  }
-
-  /* Transparent outline → swipe to blue, text stays white */
-  .btn-secondary {
-    border: 1.5px solid var(--color-accent);
-    background: transparent;
-    color: #ffffff;
-  }
-
-  .btn-secondary::before {
-    background: var(--color-accent);
-  }
-
-  .btn-secondary:hover,
-  .btn-secondary:focus-visible {
-    color: #ffffff;
-    border-color: var(--color-accent);
-    box-shadow: 0 14px 32px -16px rgba(47, 128, 255, 0.7);
-  }
-
-  .btn-nav {
-    min-height: 42px;
-    padding: 0.55rem 1.2rem;
-    border-radius: 999px;
-    font-size: 0.82rem;
   }
 
   .eyebrow {

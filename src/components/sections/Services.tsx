@@ -10,7 +10,7 @@ export function Services() {
     <section id="services" className="section-y relative border-y border-white/8 bg-surface/35">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 left-1/2 h-64 w-[42rem] -translate-x-1/2 rounded-full bg-accent/[0.06] blur-[100px]"
+        className="pointer-events-none absolute top-0 left-1/2 h-64 w-[min(42rem,100%)] -translate-x-1/2 rounded-full bg-accent/[0.06] blur-[100px]"
       />
       <div className="section-pad container-max relative">
         <Reveal>

@@ -146,7 +146,7 @@ export function Hero() {
             >
               <div
                 aria-hidden
-                className="absolute -inset-8 rounded-full bg-[radial-gradient(circle,rgba(47,128,255,0.3),transparent_62%)] blur-3xl sm:-inset-14"
+                className="absolute -inset-4 rounded-full bg-[radial-gradient(circle,rgba(47,128,255,0.3),transparent_62%)] blur-2xl sm:-inset-14 sm:blur-3xl"
               />
 
               {!reduce ? (

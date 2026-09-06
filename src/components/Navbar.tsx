@@ -42,10 +42,10 @@ export function Navbar() {
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <nav className="section-pad container-max relative flex h-14 items-center justify-between gap-3 sm:h-[4.5rem]">
+      <nav className="section-pad container-max relative flex h-14 w-full max-w-full items-center justify-between gap-2 sm:h-[4.5rem] sm:gap-3">
         <Link
           href="/#home"
-          className="inline-flex min-w-0 items-center gap-2 font-semibold tracking-[0.04em] sm:gap-2.5"
+          className="inline-flex min-w-0 shrink items-center gap-2 font-semibold tracking-[0.04em] sm:gap-2.5"
         >
           <span className="grid size-8 shrink-0 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent sm:size-9 sm:rounded-xl">
             <Code2 className="size-3.5 sm:size-4" aria-hidden />
@@ -70,14 +70,17 @@ export function Navbar() {
         </ul>
 
         <div className="flex shrink-0 items-center gap-2">
-          <Link href="/#contact" className="btn-primary btn-nav hidden md:inline-flex">
+          <Link
+            href="/#contact"
+            className="btn-primary btn-nav max-md:hidden md:inline-flex"
+          >
             <span>Hire Me</span>
             <ArrowUpRight className="size-3.5" aria-hidden />
           </Link>
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white lg:hidden"
+            className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
