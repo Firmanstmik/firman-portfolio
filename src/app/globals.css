@@ -45,6 +45,7 @@
   body {
     margin: 0;
     min-width: 320px;
+    overflow-x: clip;
     background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
@@ -77,15 +78,22 @@
 
 @layer utilities {
   .section-pad {
-    padding-inline: clamp(1.25rem, 5vw, 5.5rem);
+    padding-inline: clamp(1.5rem, 5.5vw, 5.5rem);
+  }
+
+  @media (max-width: 480px) {
+    .section-pad {
+      padding-inline: 1.35rem;
+    }
   }
 
   .section-y {
-    padding-block: clamp(5.5rem, 12vw, 9rem);
+    padding-block: clamp(4.5rem, 12vw, 9rem);
   }
 
   .container-max {
     margin-inline: auto;
+    width: 100%;
     max-width: 1400px;
   }
 
@@ -152,6 +160,8 @@
     justify-content: center;
     gap: 0.55rem;
     min-height: 52px;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 0.9rem 1.55rem;
     overflow: hidden;
     isolation: isolate;
@@ -164,6 +174,22 @@
       border-color 280ms var(--ease-out-expo),
       transform 220ms var(--ease-out-expo),
       box-shadow 220ms var(--ease-out-expo);
+  }
+
+  @media (max-width: 640px) {
+    .btn-primary,
+    .btn-secondary {
+      min-height: 48px;
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9rem;
+      box-shadow: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: none;
+    }
   }
 
   .btn-primary span,

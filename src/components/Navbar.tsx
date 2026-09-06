@@ -38,22 +38,25 @@ export function Navbar() {
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
         scrolled || open
-          ? 'border-b border-white/8 bg-bg/80 backdrop-blur-xl'
+          ? 'border-b border-white/8 bg-bg/85 backdrop-blur-xl'
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <nav className="section-pad container-max relative grid h-16 grid-cols-[1fr_auto] items-center gap-4 sm:h-[4.5rem] lg:grid-cols-[1fr_auto_1fr]">
-        <Link href="/#home" className="inline-flex items-center gap-2.5 font-semibold tracking-[0.04em]">
-          <span className="grid size-9 place-items-center rounded-xl border border-accent/30 bg-accent-soft text-accent">
-            <Code2 className="size-4" aria-hidden />
+      <nav className="section-pad container-max relative flex h-14 items-center justify-between gap-3 sm:h-[4.5rem]">
+        <Link
+          href="/#home"
+          className="inline-flex min-w-0 items-center gap-2 font-semibold tracking-[0.04em] sm:gap-2.5"
+        >
+          <span className="grid size-8 shrink-0 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent sm:size-9 sm:rounded-xl">
+            <Code2 className="size-3.5 sm:size-4" aria-hidden />
           </span>
-          <span className="text-[0.95rem]">
+          <span className="truncate text-[0.82rem] sm:text-[0.95rem]">
             <span className="text-white">FIRMAN</span>
             <span className="text-accent">LABS</span>
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex xl:gap-10">
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex xl:gap-10">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -66,18 +69,15 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center justify-end gap-2">
-          <Link
-            href="/#contact"
-            className="btn-primary btn-nav hidden sm:inline-flex"
-          >
+        <div className="flex shrink-0 items-center gap-2">
+          <Link href="/#contact" className="btn-primary btn-nav hidden md:inline-flex">
             <span>Hire Me</span>
             <ArrowUpRight className="size-3.5" aria-hidden />
           </Link>
 
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-surface text-text lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
@@ -90,12 +90,12 @@ export function Navbar() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-x-0 top-16 bottom-0 bg-bg/98 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-x-0 top-14 bottom-0 bg-bg/98 backdrop-blur-2xl sm:top-[4.5rem] lg:hidden"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="section-pad flex h-full flex-col gap-2 py-8">
+            <div className="section-pad flex h-full flex-col gap-1 py-6">
               {links.map((link, i) => (
                 <motion.div
                   key={link.href}
@@ -106,7 +106,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-2xl px-3 py-4 text-2xl font-semibold tracking-tight"
+                    className="block rounded-2xl px-2 py-3.5 text-xl font-semibold tracking-tight sm:text-2xl"
                   >
                     {link.label}
                   </Link>
@@ -115,7 +115,7 @@ export function Navbar() {
               <Link
                 href="/#contact"
                 onClick={() => setOpen(false)}
-                className="btn-primary mt-auto"
+                className="btn-primary mt-auto mb-6 w-full"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowUpRight className="size-4" aria-hidden />
