@@ -88,7 +88,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
-          <LanguageSwitch size="sm" />
+          <LanguageSwitch size="sm" className="hidden lg:inline-flex" />
           <Link
             href="/#contact"
             className="btn-primary btn-nav max-md:hidden md:inline-flex"
