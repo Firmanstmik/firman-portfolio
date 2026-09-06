@@ -43,20 +43,20 @@ export function Navbar() {
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <nav className="section-pad container-max relative grid h-16 grid-cols-[1fr_auto] items-center gap-4 sm:h-[4.25rem] lg:grid-cols-[1fr_auto_1fr]">
+      <nav className="section-pad container-max relative grid h-16 grid-cols-[1fr_auto] items-center gap-4 sm:h-[4.5rem] lg:grid-cols-[1fr_auto_1fr]">
         <Link href="/#home" className="inline-flex items-center gap-2.5 font-semibold tracking-[0.08em]">
-          <span className="grid size-8 place-items-center rounded-lg border border-accent/30 bg-accent-soft text-accent">
+          <span className="grid size-9 place-items-center rounded-xl border border-accent/30 bg-accent-soft text-accent">
             <Code2 className="size-4" aria-hidden />
           </span>
-          <span className="text-[0.82rem]">{SITE.name}</span>
+          <span className="text-[0.84rem]">{SITE.name}</span>
         </Link>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-8 lg:flex xl:gap-10">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-[0.86rem] text-muted transition-colors hover:text-text"
+                className="text-[0.88rem] text-muted transition-colors hover:text-text"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export function Navbar() {
         <div className="flex items-center justify-end gap-2">
           <Link
             href="/#contact"
-            className="hidden items-center gap-1.5 rounded-full border border-white/12 px-4 py-2 text-[0.8rem] font-semibold text-text transition-colors hover:border-accent/40 hover:text-accent sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border border-white/12 px-4 py-2.5 text-[0.82rem] font-semibold text-text transition-colors hover:border-accent/40 hover:text-accent sm:inline-flex"
           >
             Let&apos;s Talk
             <ArrowUpRight className="size-3.5" aria-hidden />

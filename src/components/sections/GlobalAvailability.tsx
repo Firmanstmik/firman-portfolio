@@ -2,29 +2,32 @@ import { Reveal } from '@/components/ui/Reveal'
 
 export function GlobalAvailability() {
   return (
-    <section className="border-y border-white/8 bg-surface/30 py-12 sm:py-14">
+    <section className="border-y border-white/8 bg-surface/30 py-14 sm:py-16">
       <div className="section-pad container-max">
         <Reveal>
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
             <div>
               <p className="eyebrow">Working Globally</p>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+              <h2 className="mt-3 text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold tracking-tight">
                 Indonesia → Worldwide
               </h2>
+              <p className="mt-3 max-w-lg text-muted">
+                Remote-first collaboration across time zones — clear communication, reliable delivery.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2.5">
               {['Indonesia', 'Netherlands', 'Remote EU', 'Global'].map((place) => (
                 <span
                   key={place}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-[0.78rem] text-muted"
+                  className="rounded-full border border-white/10 bg-white/[0.02] px-3.5 py-1.5 text-[0.8rem] text-muted"
                 >
                   {place}
                 </span>
               ))}
             </div>
           </div>
-          <div className="relative mt-8 h-px overflow-hidden bg-white/8">
-            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-accent to-transparent" />
+          <div className="relative mt-10 h-px overflow-hidden bg-white/8">
+            <div className="absolute inset-y-0 left-0 w-2/5 animate-pulse bg-gradient-to-r from-transparent via-accent to-transparent" />
           </div>
         </Reveal>
       </div>

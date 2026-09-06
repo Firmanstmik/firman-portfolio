@@ -34,7 +34,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true })
   } catch (error) {
+    if (error instanceof z.ZodError) {
+      return NextResponse.json({ ok: false, error: 'Invalid request' }, { status: 400 })
+    }
     console.error(error)
-    return NextResponse.json({ ok: false, error: 'Invalid request' }, { status: 400 })
+    return NextResponse.json({ ok: false, error: 'Server error' }, { status: 500 })
   }
 }

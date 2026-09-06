@@ -12,47 +12,50 @@ export function Hero() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="home" className="relative overflow-hidden pt-24 sm:pt-28">
+    <section id="home" className="relative overflow-hidden pt-24 sm:pt-28 lg:min-h-[100svh] lg:pt-32">
+      <div aria-hidden className="pointer-events-none absolute inset-0 grid-bg opacity-50" />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 grid-bg opacity-40"
+        className="pointer-events-none absolute -top-40 left-[12%] h-[34rem] w-[34rem] rounded-full bg-accent/[0.12] blur-[120px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/2 h-[28rem] w-[40rem] -translate-x-1/2 rounded-full bg-accent/10 blur-[100px]"
+        className="pointer-events-none absolute top-[20%] right-[-8%] h-[28rem] w-[28rem] rounded-full bg-emerald-500/[0.08] blur-[110px]"
       />
-      <div aria-hidden className="pointer-events-none absolute inset-0 noise opacity-60" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 noise opacity-50" />
 
-      <div className="section-pad container-max relative grid items-center gap-12 pb-16 lg:grid-cols-12 lg:gap-10 lg:pb-24">
-        <div className="lg:col-span-7">
+      <div className="section-pad container-max relative grid items-center gap-14 pb-20 lg:grid-cols-12 lg:gap-12 lg:pb-28 xl:gap-16">
+        <div className="lg:col-span-6 xl:col-span-7">
           <Reveal>
-            <div className="mb-6 flex flex-wrap items-center gap-3 text-[0.78rem]">
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent-soft px-3 py-1.5 font-medium text-accent">
-                <span className="size-1.5 rounded-full bg-accent" />
+            <div className="mb-7 flex flex-wrap items-center gap-3 text-[0.8rem]">
+              <span className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 font-medium text-accent shadow-[0_0_24px_-8px_rgba(34,197,94,0.8)]">
+                <span className="pulse-dot size-1.5 rounded-full bg-accent" />
                 {PROFILE.availability.toUpperCase()}
               </span>
               <span className="text-muted">Remote · Worldwide</span>
             </div>
           </Reveal>
 
-          <Reveal delay={0.05}>
-            <h1 className="max-w-3xl text-[clamp(2.4rem,7vw,4.75rem)] leading-[0.98] font-semibold tracking-[-0.045em] text-balance">
+          <Reveal delay={0.06}>
+            <h1 className="max-w-[11ch] text-[clamp(2.75rem,7.2vw,5.4rem)] leading-[0.94] font-semibold tracking-[-0.05em] text-balance sm:max-w-none">
               {PROFILE.headline[0]}
               <br />
               {PROFILE.headline[1]}
               <br />
-              <span className="text-accent">{PROFILE.headline[2]}</span>
+              <span className="bg-gradient-to-r from-accent via-[#4ade80] to-accent bg-clip-text text-transparent">
+                {PROFILE.headline[2]}
+              </span>
             </h1>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-muted sm:text-[1.08rem]">
+          <Reveal delay={0.12}>
+            <p className="mt-7 max-w-xl text-[1.05rem] leading-relaxed text-muted sm:text-[1.15rem] sm:leading-[1.7]">
               {PROFILE.subcopy}
             </p>
           </Reveal>
 
-          <Reveal delay={0.14}>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Reveal delay={0.18}>
+            <div className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
               <Magnetic>
                 <Link href="/#projects" className="btn-primary w-full sm:w-auto">
                   View My Work
@@ -67,68 +70,92 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.18}>
-            <div className="mt-12 grid grid-cols-2 gap-6 border-t border-white/8 pt-8 sm:grid-cols-4">
-              {STATS.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-[1.65rem] font-semibold tracking-tight text-text sm:text-[1.85rem]">
+          <Reveal delay={0.24}>
+            <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-9 sm:grid-cols-4">
+              {STATS.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={reduce ? false : { opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.28 + i * 0.05, duration: 0.45 }}
+                >
+                  <p className="text-[1.85rem] font-semibold tracking-tight text-text sm:text-[2.05rem]">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-[0.78rem] text-muted">{stat.label}</p>
-                </div>
+                  <p className="mt-1.5 text-[0.78rem] leading-snug text-muted">{stat.label}</p>
+                </motion.div>
               ))}
             </div>
           </Reveal>
         </div>
 
-        <div className="relative lg:col-span-5">
-          <Reveal delay={0.12}>
-            <div className="relative mx-auto max-w-[420px] lg:ml-auto lg:max-w-none">
+        <div className="relative lg:col-span-6 xl:col-span-5">
+          <Reveal delay={0.14} y={36}>
+            <div className="relative mx-auto max-w-[460px] lg:ml-auto lg:mr-0 lg:max-w-[520px]">
               <div
                 aria-hidden
-                className="absolute -inset-6 rounded-[28px] bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.18),transparent_55%)]"
+                className="absolute -inset-8 rounded-[36px] bg-[radial-gradient(circle_at_35%_20%,rgba(34,197,94,0.22),transparent_58%)]"
               />
-              <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-surface">
+              <div
+                aria-hidden
+                className="absolute -right-6 -bottom-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl"
+              />
+
+              <div className="relative overflow-hidden rounded-[28px] border border-white/12 bg-surface shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)]">
                 <Image
                   src={PROFILE.avatar}
                   alt={`${PROFILE.name}, ${PROFILE.degree}`}
-                  width={800}
-                  height={1000}
+                  width={900}
+                  height={1125}
                   priority
-                  className="aspect-[4/5] w-full object-cover object-[center_18%]"
+                  className="aspect-[4/5] w-full object-cover object-[center_16%]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-transparent" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_15%,rgba(34,197,94,0.18),transparent_42%)]" />
+                <div className="absolute inset-0 mix-blend-multiply bg-[#0a1a12]/35" />
               </div>
 
               <motion.div
-                className="absolute top-4 right-[-0.5rem] w-[min(100%,240px)] rounded-2xl border border-white/10 bg-bg/90 p-4 font-mono text-[0.72rem] shadow-2xl backdrop-blur sm:right-[-1rem] sm:top-8 sm:w-[260px] sm:text-[0.76rem]"
-                initial={reduce ? false : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.5 }}
+                className="float-y absolute top-5 right-[-0.75rem] z-10 w-[min(100%,250px)] rounded-2xl border border-white/12 bg-bg/92 p-4 font-mono text-[0.72rem] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.85)] backdrop-blur-xl sm:right-[-1.25rem] sm:top-10 sm:w-[270px] sm:text-[0.78rem]"
+                initial={reduce ? false : { opacity: 0, y: 18, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
-                <p className="mb-3 text-muted">firman@developer:~$</p>
-                <p className="mb-1 text-accent">whoami</p>
-                {TERMINAL_LINES.map((line) => (
-                  <p key={line} className="text-text/90">
-                    &gt; {line}
-                  </p>
+                <div className="mb-3 flex items-center gap-1.5">
+                  <span className="size-2 rounded-full bg-[#ff5f57]" />
+                  <span className="size-2 rounded-full bg-[#febc2e]" />
+                  <span className="size-2 rounded-full bg-[#28c840]" />
+                  <span className="ml-2 text-[0.65rem] text-muted">whoami</span>
+                </div>
+                <p className="mb-2 text-muted">firman@developer:~$</p>
+                {TERMINAL_LINES.map((line, i) => (
+                  <motion.p
+                    key={line}
+                    className="text-text/90"
+                    initial={reduce ? false : { opacity: 0, x: -6 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.55 + i * 0.08 }}
+                  >
+                    <span className="text-accent">&gt;</span> {line}
+                  </motion.p>
                 ))}
                 <span className="mt-2 inline-block h-4 w-2 animate-pulse bg-accent" aria-hidden />
               </motion.div>
 
               <motion.div
-                className="absolute bottom-4 left-3 right-3 rounded-2xl border border-white/10 bg-bg/85 p-3.5 backdrop-blur sm:left-4 sm:right-auto sm:max-w-[240px]"
-                initial={reduce ? false : { opacity: 0, y: 12 }}
+                className="absolute bottom-5 left-3 right-3 z-10 rounded-2xl border border-white/12 bg-bg/90 p-4 shadow-2xl backdrop-blur-xl sm:left-5 sm:right-auto sm:max-w-[260px]"
+                initial={reduce ? false : { opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45, duration: 0.5 }}
+                transition={{ delay: 0.55, duration: 0.55 }}
               >
                 <div className="flex items-start gap-3">
-                  <span className="mt-0.5 grid size-8 place-items-center rounded-full bg-accent-soft text-accent">
+                  <span className="mt-0.5 grid size-9 place-items-center rounded-full bg-accent-soft text-accent">
                     <Globe2 className="size-4" aria-hidden />
                   </span>
                   <div>
-                    <p className="text-[0.82rem] font-semibold">{PROFILE.location}</p>
-                    <p className="mt-0.5 text-[0.75rem] text-muted">
+                    <p className="text-[0.86rem] font-semibold">{PROFILE.location}</p>
+                    <p className="mt-0.5 text-[0.76rem] leading-snug text-muted">
                       Working with clients worldwide
                     </p>
                   </div>

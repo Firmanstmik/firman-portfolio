@@ -3,35 +3,36 @@ import { ArrowUpRight } from 'lucide-react'
 import { getFeaturedProjects } from '@/data/site'
 import { ProjectCard } from '@/components/sections/ProjectCard'
 import { Reveal } from '@/components/ui/Reveal'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 
 export function Projects() {
   const featured = getFeaturedProjects()
 
   return (
-    <section id="projects" className="section-y">
+    <section id="projects" className="section-y relative">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent"
+      />
       <div className="section-pad container-max">
         <Reveal>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="eyebrow">Selected Work</p>
-              <h2 className="mt-3 text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-tight">
-                Featured Projects
-              </h2>
-              <p className="mt-3 max-w-xl text-muted">
-                A selection of real systems I&apos;ve built for businesses, organizations, and startups.
-              </p>
-            </div>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent"
-            >
-              View All Projects
-              <ArrowUpRight className="size-3.5" aria-hidden />
-            </Link>
-          </div>
+          <SectionHeader
+            eyebrow="Selected Work"
+            title="Featured Projects"
+            lead="Real systems shipped for businesses, organizations, and startups — not demos, not templates."
+            action={
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform hover:translate-x-0.5"
+              >
+                View All Projects
+                <ArrowUpRight className="size-3.5" aria-hidden />
+              </Link>
+            }
+          />
         </Reveal>
 
-        <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:gap-6">
+        <div className="mt-12 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:gap-7">
           {featured.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} />
           ))}

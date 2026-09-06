@@ -1,37 +1,40 @@
 import { SERVICES } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 import { AppWindow, Smartphone, Server, Rocket } from 'lucide-react'
 
 const icons = [AppWindow, Smartphone, Server, Rocket]
 
 export function Services() {
   return (
-    <section id="services" className="section-y border-y border-white/8 bg-surface/40">
-      <div className="section-pad container-max">
+    <section id="services" className="section-y relative border-y border-white/8 bg-surface/35">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-0 left-1/2 h-64 w-[42rem] -translate-x-1/2 rounded-full bg-accent/[0.06] blur-[100px]"
+      />
+      <div className="section-pad container-max relative">
         <Reveal>
-          <p className="eyebrow">What I Do</p>
-          <h2 className="mt-3 text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-tight">
-            End-to-End Development
-          </h2>
-          <p className="mt-3 max-w-xl text-muted">
-            From idea to deployment, I handle the entire development process.
-          </p>
+          <SectionHeader
+            eyebrow="What I Do"
+            title="End-to-End Development"
+            lead="From idea to deployment, I own the full path — product thinking, engineering, and shipping."
+          />
         </Reveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service, i) => {
             const Icon = icons[i]
             return (
-              <Reveal key={service.code} delay={i * 0.05}>
-                <article className="card-surface h-full p-5 transition-colors duration-300 hover:border-accent/25 sm:p-6">
-                  <div className="mb-5 flex items-center justify-between">
-                    <span className="grid size-11 place-items-center rounded-full border border-accent/20 bg-accent-soft text-accent">
+              <Reveal key={service.code} delay={i * 0.06}>
+                <article className="card-surface group h-full p-6 sm:p-7">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="grid size-12 place-items-center rounded-2xl border border-accent/20 bg-accent-soft text-accent transition-transform duration-300 group-hover:scale-105">
                       <Icon className="size-5" aria-hidden />
                     </span>
                     <span className="font-mono text-xs text-muted">{service.code}</span>
                   </div>
-                  <h3 className="text-lg font-semibold tracking-tight">{service.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{service.desc}</p>
+                  <h3 className="text-xl font-semibold tracking-tight">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{service.desc}</p>
                 </article>
               </Reveal>
             )
