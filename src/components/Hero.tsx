@@ -16,14 +16,16 @@ export function Hero() {
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      <div className="section-pad relative mx-auto grid min-h-[100svh] max-w-[1280px] items-center gap-8 pt-24 pb-14 sm:gap-10 sm:pt-28 sm:pb-16 md:grid-cols-12 md:gap-10 md:pb-20 lg:gap-14">
+      <div className="section-pad relative mx-auto grid min-h-[100svh] max-w-[1280px] items-center gap-6 pt-[5.25rem] pb-12 sm:gap-10 sm:pt-28 sm:pb-16 md:grid-cols-12 md:gap-10 md:pb-20 lg:gap-14">
         <Stagger className="order-2 md:order-1 md:col-span-7 lg:col-span-6" delay={0.05}>
           <StaggerItem>
-            <p className="mb-4 text-[0.82rem] font-medium text-accent">{t('hero.available')}</p>
+            <p className="mb-3 text-[0.78rem] font-medium text-accent sm:mb-4 sm:text-[0.82rem]">
+              {t('hero.available')}
+            </p>
           </StaggerItem>
 
           <StaggerItem>
-            <h1 className="font-display text-[clamp(2.45rem,8vw,5.2rem)] leading-[0.94] font-bold tracking-[-0.05em] text-ink">
+            <h1 className="font-display text-[clamp(2.35rem,11vw,5.2rem)] leading-[0.94] font-bold tracking-[-0.05em] text-ink">
               {PROFILE.name}
               <motion.span
                 className="ml-1.5 align-super text-[0.42em] font-semibold tracking-[-0.02em] text-accent sm:ml-2"
@@ -105,7 +107,7 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
-            className="relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-[18px] shadow-[0_28px_70px_-36px_rgba(10,10,11,0.5)] sm:rounded-[22px] sm:max-w-[420px] md:aspect-[5/6] md:max-w-none lg:ml-auto lg:max-w-[520px]"
+            className="relative mx-auto aspect-[4/5] w-full max-h-[58svh] overflow-hidden rounded-[22px] shadow-[0_28px_70px_-36px_rgba(10,10,11,0.5)] sm:max-h-none sm:rounded-[22px] sm:max-w-[420px] md:aspect-[5/6] md:max-w-none lg:ml-auto lg:max-w-[520px]"
             whileHover={reduce ? undefined : { scale: 1.015 }}
             transition={{ type: 'spring', stiffness: 220, damping: 22 }}
           >
